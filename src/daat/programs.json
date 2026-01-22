@@ -1,0 +1,68 @@
+[
+  {
+    "id": 1,
+    "name": "Test Program 1",
+    "description": "This is a demo program",
+    "visible": true,
+    "icon": "📘",
+    "iconColor": "#2563eb",
+    "banner": "/banner1.png",
+    "startDate": "2025-01-01",
+    "endDate": "2025-12-31"
+  },
+  {
+    "id": 2,
+    "name": "SSC Model Test 2025",
+    "description": "Full syllabus SSC model test program with MCQ and final exams",
+    "visible": true,
+    "icon": "📝",
+    "iconColor": "#16a34a",
+    "banner": "/banner_ssc.png",
+    "startDate": "2025-02-01",
+    "endDate": "2025-11-30"
+  },
+  {
+    "id": 3,
+    "name": "HSC Science Exam Preparation",
+    "description": "Physics, Chemistry, Biology complete exam preparation program",
+    "visible": true,
+    "icon": "🧪",
+    "iconColor": "#9333ea",
+    "banner": "/banner_hsc_science.png",
+    "startDate": "2025-03-01",
+    "endDate": "2026-03-01"
+  },
+  {
+    "id": 4,
+    "name": "Medical Admission Test Batch",
+    "description": "Medical admission MCQ practice with chapter-wise questions",
+    "visible": false,
+    "icon": "🩺",
+    "iconColor": "#dc2626",
+    "banner": "/banner_medical.png",
+    "startDate": "2025-04-01",
+    "endDate": "2026-01-31"
+  },
+  {
+    "id": 5,
+    "name": "Engineering Admission Program",
+    "description": "Math, Physics and Chemistry focused engineering admission program",
+    "visible": true,
+    "icon": "⚙️",
+    "iconColor": "#0ea5e9",
+    "banner": "/banner_engineering.png",
+    "startDate": "2025-05-01",
+    "endDate": "2026-02-28"
+  },
+  {
+    "id": 6,
+    "name": "University Final Exam Practice",
+    "description": "University semester final exam preparation with practice tests",
+    "visible": true,
+    "icon": "🎓",
+    "iconColor": "#f59e0b",
+    "banner": "/banner_university.png",
+    "startDate": "2025-06-01",
+    "endDate": "2026-06-01"
+  }
+]

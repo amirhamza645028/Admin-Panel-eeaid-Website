@@ -1,0 +1,18 @@
+[
+  {
+    "id": "1",
+    "name": "Amirhamza",
+    "email": "md9407510@gmail.com",
+    "phone": "01729007747",
+    "batch": "Batch 24",
+    "status": "Active"
+  },
+  {
+    "id": "2",
+    "name": "Sharif Sarkar",
+    "email": "sharif@gmail.com",
+    "phone": "01618220044",
+    "batch": "Batch 25",
+    "status": "Inactive"
+  }
+]

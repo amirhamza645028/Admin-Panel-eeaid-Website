@@ -1,0 +1,13 @@
+{
+  "stats": [
+    { "title": "Total Students", "value": 1240 },
+    { "title": "Total Subjects", "value": 18 },
+    { "title": "Total Chapters", "value": 320 },
+    { "title": "Total MCQs", "value": 12500 }
+  ],
+  "recentStudents": [
+    { "id": 1, "name": "Rahim Uddin", "email": "rahim@gmail.com" },
+    { "id": 2, "name": "Karim Khan", "email": "karim@gmail.com" },
+    { "id": 3, "name": "Ayesha Akter", "email": "ayesha@gmail.com" }
+  ]
+}

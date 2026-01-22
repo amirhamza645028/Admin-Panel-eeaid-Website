@@ -1,0 +1,48 @@
+{
+  "statsCards": [
+    { "id": 1, "title": "Total Students", "count": "5,240", "badge": "+65 New Today", "icon": "Users", "color": "blue" },
+    { "id": 2, "title": "Active Students", "count": "1,879", "badge": "+20 Today", "icon": "UserCheck", "color": "green" },
+    { "id": 3, "title": "Total Subjects", "count": "28", "badge": null, "icon": "Book", "color": "purple" },
+    { "id": 4, "title": "Total Exams", "count": "112", "badge": "+11 Exams", "icon": "FileText", "color": "orange" }
+  ],
+  "recentActivities": [
+    { "id": 1, "user": "John Doe", "action": "enrolled aniramza, student.", "time": "5 minutes ago", "avatar": "https://i.pravatar.cc/150?u=1" },
+    { "id": 2, "user": "Saiful Islam", "action": "scored 85% in MCQ Exam.", "time": "15 minutes ago", "avatar": "https://i.pravatar.cc/150?u=2" },
+    { "id": 3, "user": "Test Subject", "action": "Final created.", "time": "30 minutes ago", "avatar": "https://i.pravatar.cc/150?u=3" }
+  ],
+  "studentPerformance": {
+    "months": ["April", "June", "May", "Jul", "Aug", "Sep", "Sep"],
+    "data": [
+      { "mcq": 40, "final": 60 },
+      { "mcq": 50, "final": 55 },
+      { "mcq": 30, "final": 70 },
+      { "mcq": 60, "final": 40 },
+      { "mcq": 55, "final": 65 },
+      { "mcq": 45, "final": 75 },
+      { "mcq": 70, "final": 80 }
+    ]
+  },
+  "midStats": [
+    { "id": 1, "title": "Monthly Revenue", "value": "$12,510", "sub": "-15%", "icon": "DollarSign", "bg": "blue" },
+    { "id": 2, "title": "Exam Participation", "value": "4,320", "sub": "MCQs Attempted", "icon": "PieChart", "bg": "green" },
+    { "id": 3, "title": "Active Batches", "value": "320", "sub": "Today", "icon": "Users", "bg": "indigo" },
+    { "id": 4, "title": "Active Batches", "value": "15", "sub": "Ongoing", "icon": "Layers", "bg": "purple" }
+  ],
+  "recentPurchases": [
+    { "id": 1, "buyer": "Amirhamza", "program": "Test Batch 1.1", "price": "$90", "date": "16 mins ago", "status": "Pending" },
+    { "id": 2, "buyer": "Jannatul Fedous", "program": "GP Practice", "price": "$120", "date": "25 mins ago", "status": "Paid" },
+    { "id": 3, "buyer": "Tamim", "program": "Batches", "price": "$50", "date": "1 hour ago", "status": "Failed" }
+  ],
+  "supportRequests": {
+    "refunds": 5,
+    "tickets": 7
+  },
+  "notices": [
+    { "id": 1, "title": "Adminmiralora: iOS app guide Deadline", "tag": "Urgent", "date": "Expiring Notices - Urgent" }
+  ],
+  "footerStats": [
+    { "label": "Pending Support", "count": 5, "color": "red" },
+    { "label": "Pending Support", "count": 7, "color": "blue" },
+    { "label": "Expiring", "count": 3, "color": "orange" }
+  ]
+}
