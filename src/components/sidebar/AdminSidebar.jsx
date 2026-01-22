@@ -34,7 +34,7 @@ const AdminSidebar = ({ isCollapsed }) => {
       subItems: [
         { title: "Programs", path: "/programs" },
         { title: "Purchases", path: "/admin/purchases" },
-        { title: "Coupons", path: "/admin/coupons" },
+        { title: "Coupons", path: "/coupons" },
         { title: "Invoices", path: "/admin/invoices" }
       ]
     },

@@ -15,6 +15,9 @@ import Profile from './Pages/admin/profile/Profile';
 import Teacher from './Pages/admin/teachers/Teacher';
 // import NavBar from './Layout/NavBar';
 import UserDashboard from './Pages/User/profile/UserDashboard';
+import CouponList from './Pages/admin/cupon/CouponList';
+import CouponAdd from './Pages/admin/cupon/CouponAdd';
+import CouponDetails from './Pages/admin/cupon/CouponDetails';
 // import Home from './components/Home/Home';
 
 const router = createBrowserRouter([
@@ -66,8 +69,20 @@ const router = createBrowserRouter([
           element:<Teacher></Teacher>
         },
         {
-          ptha:'/user-dashboard',
+          path:'/user-dashboard',
           element:<UserDashboard></UserDashboard>
+        },
+        {
+          path:'/coupons-add',
+          element:<CouponAdd></CouponAdd>
+        },
+        {
+          path:'/coupons-details',
+          element:<CouponDetails></CouponDetails>
+        },
+        {
+          path:'/coupons',
+          element:<CouponList></CouponList>
         }
        
       ]
