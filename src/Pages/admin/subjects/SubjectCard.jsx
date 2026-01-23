@@ -5,7 +5,7 @@ const SubjectCard = ({ subject, onClick }) => {
     return (
       <div 
         onClick={() => onClick(subject)}
-        className="card bg-white hover:shadow-2xl transition-all duration-300 cursor-pointer border border-gray-100 hover:border-blue-300 transform hover:-translate-y-1"
+        className="card bg-white dark:bg-slate-800/60 backdrop-blur-sm hover:shadow-2xl transition-all duration-300 cursor-pointer border border-gray-200 dark:border-slate-700 hover:border-blue-300 dark:hover:border-cyan-500 transform hover:-translate-y-1"
       >
         {/* Thumbnail Image */}
         <figure className="relative h-40 overflow-hidden">
@@ -14,34 +14,33 @@ const SubjectCard = ({ subject, onClick }) => {
             alt={subject.title}
             className="w-full h-full object-cover"
           />
-          <div className="absolute top-1 right-1 badge badge-primary badge-sm">
+          <div className="absolute top-1 right-1 badge badge-primary badge-sm bg-cyan-600 text-white border-none">
             {subject.category}
           </div>
         </figure>
   
-        <div className="card-body p-2">
+        <div className="card-body p-4">
           {/* Subject Title */}
-          <h2 className="card-title text-lg font-bold text-gray-800 mb-2">
+          <h2 className="card-title text-lg font-bold text-gray-800 dark:text-white mb-2">
             {subject.title}
           </h2>
   
           {/* Instructor Info */}
-          <div className="flex items-center gap-2 mb-1">
+          <div className="flex items-center gap-2 mb-3">
             <div className="avatar">
-              <div className="w-8 h-8 rounded-full">
+              <div className="w-8 h-8 rounded-full ring-2 ring-blue-300 dark:ring-cyan-500 ring-offset-base-100 ring-offset-2 dark:ring-offset-slate-800">
                 <img src={subject.instructor.avatar} alt={subject.instructor.name} />
               </div>
             </div>
-            <span className="text-sm text-gray-600">{subject.instructor.name}</span>
+            <span className="text-sm text-gray-600 dark:text-slate-300">{subject.instructor.name}</span>
           </div>
   
           {/* Feature Tags */}
-          <div className="flex flex-wrap gap-1 mb-2">
+          <div className="flex flex-wrap gap-1 mb-4">
             {subject.features.map((feature, index) => (
               <span 
                 key={index} 
-                className="badge badge-outline badge-sm text-xs"
-                style={{ borderColor: '#4A90E2', color: '#4A90E2' }}
+                className="badge badge-outline badge-sm text-xs text-blue-600 border-blue-300 dark:text-cyan-400 dark:border-cyan-700"
               >
                 {feature}
               </span>
@@ -49,7 +48,7 @@ const SubjectCard = ({ subject, onClick }) => {
           </div>
   
           {/* Quick Info */}
-          <div className="flex justify-between items-center text-xs text-gray-500 pt-2 border-t">
+          <div className="flex justify-between items-center text-xs text-gray-500 dark:text-slate-400 pt-3 border-t border-gray-200 dark:border-slate-700">
             <div className="flex items-center gap-1">
               <BookOpen size={14} />
               <span>{subject.totalChapters} Chapters</span>
@@ -61,10 +60,9 @@ const SubjectCard = ({ subject, onClick }) => {
           </div>
   
           {/* View Details Button */}
-          <div className="card-actions justify-end mt-1">
+          <div className="card-actions justify-end mt-4">
             <button 
-              className="btn btn-sm text-white"
-              style={{ backgroundColor: '#4A90E2' }}
+              className="btn btn-sm text-white bg-blue-600 hover:bg-blue-700 dark:bg-cyan-600 dark:hover:bg-cyan-700 border-none"
             >
               View Details
             </button>

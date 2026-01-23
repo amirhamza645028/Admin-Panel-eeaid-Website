@@ -24,14 +24,14 @@ const Teacher = () => {
   );
 
   return (
-    <div className="p-6 bg-[#0a0f1d] min-h-screen text-white">
+    <div className="p-6 bg-gray-50 min-h-screen text-slate-900 dark:bg-[#0a0f1d] dark:text-white">
       {/* Header Section */}
       <div className="flex flex-col lg:flex-row justify-between items-start lg:items-center mb-10 gap-6">
         <div>
-          <h1 className="text-3xl font-bold text-cyan-400 drop-shadow-[0_0_10px_rgba(6,182,212,0.6)]">
+          <h1 className="text-3xl font-bold text-cyan-600 dark:text-cyan-400 drop-shadow-[0_0_10px_rgba(6,182,212,0.6)]">
             Teacher Faculty
           </h1>
-          <p className="text-slate-400 text-sm mt-1">Manage experts and their assigned subjects</p>
+          <p className="text-slate-600 dark:text-slate-400 text-sm mt-1">Manage experts and their assigned subjects</p>
         </div>
 
         <div className="flex flex-wrap gap-4 w-full lg:w-auto">
@@ -41,14 +41,14 @@ const Teacher = () => {
             <input 
               type="text" 
               placeholder="Search by name or topic..." 
-              className="w-full bg-slate-900 border border-slate-800 rounded-xl py-2.5 pl-10 pr-4 focus:border-cyan-500 focus:ring-1 focus:ring-cyan-500 outline-none transition-all"
+              className="w-full bg-white dark:bg-slate-900 border border-gray-300 dark:border-slate-800 rounded-xl py-2.5 pl-10 pr-4 focus:border-cyan-500 focus:ring-1 focus:ring-cyan-500 outline-none transition-all"
               onChange={(e) => setSearchTerm(e.target.value)}
             />
           </div>
 
           <button 
             onClick={() => navigate('/admin/teacher-add')}
-            className="flex items-center gap-2 bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-500 hover:to-cyan-500 px-6 py-2.5 rounded-xl font-bold shadow-[0_0_15px_rgba(6,182,212,0.4)] transition-all"
+            className="flex items-center gap-2 bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-500 hover:to-cyan-500 px-6 py-2.5 rounded-xl font-bold shadow-[0_0_15px_rgba(6,182,212,0.4)] transition-all text-white"
           >
             <UserPlus size={20} /> Add Teacher
           </button>
@@ -66,19 +66,19 @@ const Teacher = () => {
               animate={{ opacity: 1, scale: 1 }}
               exit={{ opacity: 0, scale: 0.8 }}
               whileHover={{ y: -5 }}
-              className="bg-slate-900/60 border border-slate-800 rounded-[2rem] p-6 backdrop-blur-sm relative group"
+              className="bg-white/60 dark:bg-slate-900/60 border border-gray-200 dark:border-slate-800 rounded-[2rem] p-6 backdrop-blur-sm relative group"
             >
               {/* Profile Image & Status */}
               <div className="flex items-start justify-between mb-4">
                 <div className="relative">
-                  <img src={teacher.image} alt={teacher.name} className="w-20 h-20 rounded-2xl object-cover border-2 border-slate-700 group-hover:border-cyan-500 transition-colors" />
-                  <div className="absolute -bottom-1 -right-1 w-4 h-4 bg-emerald-500 border-2 border-slate-900 rounded-full"></div>
+                  <img src={teacher.image} alt={teacher.name} className="w-20 h-20 rounded-2xl object-cover border-2 border-gray-200 dark:border-slate-700 group-hover:border-cyan-500 transition-colors" />
+                  <div className="absolute -bottom-1 -right-1 w-4 h-4 bg-emerald-500 border-2 border-white dark:border-slate-900 rounded-full"></div>
                 </div>
                 <div className="flex gap-2">
-                  <button onClick={() => navigate(`/admin/teacher-edit/${teacher.id}`)} className="p-2 bg-slate-800 rounded-lg text-amber-400 hover:bg-amber-500 hover:text-white transition-all">
+                  <button onClick={() => navigate(`/admin/teacher-edit/${teacher.id}`)} className="p-2 bg-gray-100 dark:bg-slate-800 rounded-lg text-amber-500 dark:text-amber-400 hover:bg-amber-500 hover:text-white transition-all">
                     <Edit3 size={16} />
                   </button>
-                  <button onClick={() => handleRemove(teacher.id)} className="p-2 bg-slate-800 rounded-lg text-rose-400 hover:bg-rose-500 hover:text-white transition-all">
+                  <button onClick={() => handleRemove(teacher.id)} className="p-2 bg-gray-100 dark:bg-slate-800 rounded-lg text-rose-500 dark:text-rose-400 hover:bg-rose-500 hover:text-white transition-all">
                     <Trash2 size={16} />
                   </button>
                 </div>
@@ -86,17 +86,17 @@ const Teacher = () => {
 
               {/* Info Section */}
               <div className="space-y-3">
-                <h3 className="text-xl font-bold text-white group-hover:text-cyan-400 transition-colors">{teacher.name}</h3>
-                <div className="flex items-center gap-2 text-sm text-slate-400">
+                <h3 className="text-xl font-bold text-slate-900 dark:text-white group-hover:text-cyan-400 transition-colors">{teacher.name}</h3>
+                <div className="flex items-center gap-2 text-sm text-slate-600 dark:text-slate-400">
                   <BookOpen size={14} className="text-cyan-500" />
                   <span>{teacher.subject} • <span className="text-cyan-400 font-semibold">{teacher.group}</span></span>
                 </div>
                 
-                <div className="pt-4 border-t border-slate-800 space-y-2">
-                  <div className="flex items-center gap-3 text-xs text-slate-300">
+                <div className="pt-4 border-t border-gray-200 dark:border-slate-800 space-y-2">
+                  <div className="flex items-center gap-3 text-xs text-slate-500 dark:text-slate-300">
                     <Mail size={14} className="text-slate-500" /> {teacher.email}
                   </div>
-                  <div className="flex items-center gap-3 text-xs text-slate-300">
+                  <div className="flex items-center gap-3 text-xs text-slate-500 dark:text-slate-300">
                     <Phone size={14} className="text-slate-500" /> {teacher.phone}
                   </div>
                 </div>
