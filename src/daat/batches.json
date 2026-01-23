@@ -1,0 +1,26 @@
+[
+  {
+    "id": 1,
+    "name": "Batch 1 - Morning",
+    "program": "Test Program 1 - টেস্ট প্রোগ্রাম ১",
+    "students": 50,
+    "startDate": "2024-01-15",
+    "endDate": "2024-06-15"
+  },
+  {
+    "id": 2,
+    "name": "Batch 2 - Evening",
+    "program": "GP COURSE",
+    "students": 35,
+    "startDate": "2024-02-01",
+    "endDate": "2024-07-01"
+  },
+  {
+    "id": 3,
+    "name": "Weekend Batch",
+    "program": "Test Program 1 - টেস্ট প্রোগ্রাম ১",
+    "students": 75,
+    "startDate": "2024-01-20",
+    "endDate": "2024-06-20"
+  }
+]

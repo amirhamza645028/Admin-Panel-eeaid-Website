@@ -1,19 +1,19 @@
 import { useState, useEffect } from 'react';
 import { Edit, ArrowRight, Plus, X } from 'lucide-react';
 import { Link } from "react-router-dom";
-import batchesData from '../../../daat/batches.json';
+import mcqExamsData from '../../../daat/mcqExams.json';
 
-// BatchList.jsx Component
-const BatchList = () => {
-  const [batches, setBatches] = useState([]);
+// MCQExamList.jsx Component
+const MCQExamList = () => {
+  const [exams, setExams] = useState([]);
   const [toast, setToast] = useState(null);
 
   useEffect(() => {
     // Load from JSON file
-    const loadBatches = () => {
-      setBatches(batchesData);
+    const loadExams = () => {
+      setExams(mcqExamsData);
     };
-    loadBatches();
+    loadExams();
   }, []);
 
   const showToast = (message, type = 'success') => {
@@ -21,19 +21,19 @@ const BatchList = () => {
     setTimeout(() => setToast(null), 3000);
   };
 
-  const handleEdit = (batch) => {
-    console.log('Navigate to edit:', batch.id);
-    // Use: navigate(`/batches/edit/${batch.id}`)
+  const handleEdit = (exam) => {
+    console.log('Navigate to edit:', exam.id);
+    // Use: navigate(`/mcq-exams/edit/${exam.id}`)
   };
 
-  const handleViewDetails = (batch) => {
-    console.log('Navigate to details:', batch.id);
-    // Use: navigate(`/batches/${batch.id}`)
+  const handleViewDetails = (exam) => {
+    console.log('Navigate to details:', exam.id);
+    // Use: navigate(`/mcq-exams/${exam.id}`)
   };
 
   const handleAddNew = () => {
-    console.log('Navigate to add new batch');
-    // Use: navigate('/batches/new')
+    console.log('Navigate to add new exam');
+    // Use: navigate('/mcq-exams/new')
   };
 
   return (
@@ -60,82 +60,80 @@ const BatchList = () => {
       {/* Header */}
       <div className="flex items-center justify-between mb-8">
         <h1 className="text-4xl font-bold bg-gradient-to-r from-slate-800 to-slate-600 bg-clip-text text-transparent">
-          All Batches
+          All MCQ Exams
         </h1>
-        <Link to={'/batches/new'}
+        <Link to={'/mcq-exams/new'}
           onClick={handleAddNew}
           className="flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-cyan-500 to-cyan-600 text-white rounded-xl font-semibold shadow-lg hover:shadow-xl hover:from-cyan-600 hover:to-cyan-700 transition-all duration-300 transform hover:-translate-y-0.5"
         >
           <Plus size={20} />
-          Add New Batch
+          Add New Exam
         </Link >
       </div>
 
-      {/* Batches Table */}
+      {/* Exams Table */}
       <div className="bg-white/80 backdrop-blur-sm rounded-2xl shadow-xl overflow-hidden border border-slate-200/50">
         {/* Table Header */}
         <div className="bg-gradient-to-r from-slate-800 to-slate-700 px-8 py-5">
           <div className="grid grid-cols-12 gap-6 text-sm font-semibold text-white uppercase tracking-wider">
-            <div className="col-span-4">Batch Name</div>
+            <div className="col-span-3">Exam Title</div>
             <div className="col-span-3">Program</div>
-            <div className="col-span-2">Students</div>
-            <div className="col-span-2">Date Range</div>
+            <div className="col-span-2">Subject</div>
+            <div className="col-span-2">Date</div>
+            <div className="col-span-1">Duration</div>
             <div className="col-span-1 text-right">Actions</div>
           </div>
         </div>
 
         {/* Table Body */}
         <div className="divide-y divide-slate-200/50">
-          {batches.map((batch, index) => (
+          {exams.map((exam, index) => (
             <div
-              key={batch.id}
+              key={exam.id}
               className="px-8 py-6 hover:bg-gradient-to-r hover:from-blue-50/50 hover:to-indigo-50/50 transition-all duration-300 group"
               style={{
                 animation: `fadeInUp 0.5s ease-out ${index * 0.1}s both`
               }}
             >
               <div className="grid grid-cols-12 gap-6 items-center">
-                {/* Batch Name */}
-                <div className="col-span-4">
+                {/* Exam Title */}
+                <div className="col-span-3">
                   <h3 className="text-lg font-bold text-slate-800 group-hover:text-blue-600 transition-colors">
-                    {batch.name}
+                    {exam.title}
                   </h3>
                 </div>
 
                 {/* Program */}
                 <div className="col-span-3">
-                    <p className="text-sm text-slate-500 mt-0.5">{batch.program}</p>
+                    <p className="text-sm text-slate-500 mt-0.5">{exam.program}</p>
                 </div>
 
-                {/* Students */}
+                {/* Subject */}
                 <div className="col-span-2">
-                    <p className="text-sm text-slate-500 mt-0.5">{batch.students}</p>
+                    <p className="text-sm text-slate-500 mt-0.5">{exam.subject}</p>
                 </div>
 
-                {/* Date Range */}
+                {/* Date */}
                 <div className="col-span-2">
-                  <div className="flex flex-col gap-1">
-                    <span className="text-sm font-medium text-slate-700">
-                      {batch.startDate}
-                    </span>
-                    <span className="text-xs text-slate-400">to</span>
-                    <span className="text-sm font-medium text-slate-700">
-                      {batch.endDate}
-                    </span>
-                  </div>
+                    <p className="text-sm text-slate-500 mt-0.5">{exam.date}</p>
+                </div>
+
+                {/* Duration */}
+                <div className="col-span-1">
+                    <p className="text-sm text-slate-500 mt-0.5">{exam.duration}</p>
                 </div>
 
                 {/* Actions */}
                 <div className="col-span-1 flex items-center justify-end gap-3">
-                  <Link to={`/batches/edit/${batch.id}`}
-                    onClick={() => handleEdit(batch)}
+                  <Link to={`/mcq-exams/edit/${exam.id}`}
+                    onClick={() => handleEdit(exam)}
                     className="p-3 bg-blue-100 text-blue-600 rounded-xl hover:bg-blue-600 hover:text-white transition-all duration-300 shadow-md hover:shadow-lg transform hover:scale-110"
-                    title="Edit Batch"
+                    title="Edit Exam"
                   >
                     <Edit size={18} />
                   </Link>
-                  <Link to={`/batches/${batch.id}`}
-                    onClick={() => handleViewDetails(batch)}
+                  <Link to={`/mcq-exams/${exam.id}`}
+                    onClick={() => handleViewDetails(exam)}
                     className="p-3 bg-indigo-100 text-indigo-600 rounded-xl hover:bg-indigo-600 hover:text-white transition-all duration-300 shadow-md hover:shadow-lg transform hover:scale-110"
                     title="View Details"
                   >
@@ -148,11 +146,11 @@ const BatchList = () => {
         </div>
       </div>
 
-      {batches.length === 0 && (
+      {exams.length === 0 && (
         <div className="text-center py-16 bg-white/80 backdrop-blur-sm rounded-2xl shadow-xl mt-8">
-          <div className="text-6xl mb-4">📚</div>
-          <h3 className="text-2xl font-bold text-slate-700 mb-2">No Batches Yet</h3>
-          <p className="text-slate-500 mb-6">Create your first batch to get started</p>
+          <div className="text-6xl mb-4">📝</div>
+          <h3 className="text-2xl font-bold text-slate-700 mb-2">No MCQ Exams Yet</h3>
+          <p className="text-slate-500 mb-6">Create your first MCQ exam to get started</p>
         </div>
       )}
 
@@ -187,4 +185,4 @@ const BatchList = () => {
   );
 };
 
-export default BatchList;
+export default MCQExamList;

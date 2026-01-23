@@ -11,6 +11,8 @@ import ProgramDetails from './Pages/admin/program/ProgramDetails';
 import StudentDetails from './Pages/admin/students/StudentDetails';
 import StudentList from './Pages/admin/students/StudentList';
 import StudentAdd from './Pages/admin/students/StudentAdd';
+import BatchList from './Pages/admin/batches/batchs';
+import MCQExamList from './Pages/admin/exam/MCQExamList';
 import Profile from './Pages/admin/profile/Profile';
 import Teacher from './Pages/admin/teachers/Teacher';
 // import NavBar from './Layout/NavBar';
@@ -47,6 +49,14 @@ const router = createBrowserRouter([
         {
           path:'/programs/:id',
           element:<ProgramDetails></ProgramDetails>
+        },
+        {
+          path:'/batches',
+          element:<BatchList></BatchList>
+        },
+        {
+          path:'/mcq-exams',
+          element:<MCQExamList></MCQExamList>
         },
         {
           path:'/student-details',

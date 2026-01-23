@@ -28,9 +28,11 @@ const AdminSidebar = ({ isCollapsed }) => {
       icon: BookOpen,
       subItems: [
         { title: "Subjects", path: "/subjects" },
+        { title: "Batches", path: "/batches" },
         { title: "Topics", path: "/topics" },
         { title: "Question Bank", path: "/questions" },
-        { title: "Exams", path: "/exams" }
+        { title: "Exams", path: "/exams" },
+        { title: "MCQ Exams", path: "/mcq-exams" }
       ]
     },
     {

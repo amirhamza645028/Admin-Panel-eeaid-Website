@@ -1,0 +1,26 @@
+[
+  {
+    "id": 1,
+    "title": "Mid-term Exam",
+    "program": "Test Program 1 - টেস্ট প্রোগ্রাম ১",
+    "subject": "Anatomy",
+    "date": "2024-08-15",
+    "duration": "60 mins"
+  },
+  {
+    "id": 2,
+    "title": "Final Exam",
+    "program": "GP COURSE",
+    "subject": "Pharmacology",
+    "date": "2024-09-01",
+    "duration": "90 mins"
+  },
+  {
+    "id": 3,
+    "title": "Weekly Quiz",
+    "program": "Test Program 1 - টেস্ট প্রোগ্রাম ১",
+    "subject": "Physiology",
+    "date": "2024-07-25",
+    "duration": "30 mins"
+  }
+]
