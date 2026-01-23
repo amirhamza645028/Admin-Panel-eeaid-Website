@@ -22,9 +22,6 @@ import SubjectList from './Pages/admin/subjects/SubjectList';
 import Settings from './Pages/admin/settings/Settings';
 import Home from './components/Home/Home';
 
-import { ThemeProvider } from './context/ThemeContext';
-
-
 const router = createBrowserRouter([
   {
       path:'/',     
@@ -106,10 +103,8 @@ const router = createBrowserRouter([
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-    <ThemeProvider>
-      <div className='mx-auto'>
-        <RouterProvider router={router} />
-      </div>
-    </ThemeProvider>
+    <div className='mx-auto'>
+      <RouterProvider router={router} />
+    </div>
   </React.StrictMode>
   )

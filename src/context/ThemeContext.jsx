@@ -14,12 +14,14 @@ export const ThemeProvider = ({ children }) => {
 
         setIsDark(initialTheme === 'dark');
         document.querySelector('html').setAttribute('data-theme', initialTheme);
+        document.documentElement.classList.toggle('dark', initialTheme === 'dark');
     }, []);
 
     const toggleTheme = () => {
         const newTheme = !isDark ? 'dark' : 'light';
         localStorage.setItem('theme', newTheme);
         document.querySelector('html').setAttribute('data-theme', newTheme);
+        document.documentElement.classList.toggle('dark', newTheme === 'dark');
         setIsDark(!isDark);
     };
 
