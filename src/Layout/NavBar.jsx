@@ -2,17 +2,12 @@ import { Link, useLocation } from "react-router-dom";
 import { useState } from "react";
 import { Sun, Moon, LogOut, User, Bell, Menu, X } from "lucide-react"; 
 import logo from '../../src/assets/favicon.ico';
+import { useTheme } from "../context/ThemeContext";
 
 const NavBar = () => {
     const location = useLocation();
-    const [isDark, setIsDark] = useState(true);
+    const { isDark, toggleTheme } = useTheme();
     const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
-
-    const toggleTheme = () => {
-        const theme = isDark ? "light" : "dark";
-        document.querySelector('html').setAttribute('data-theme', theme);
-        setIsDark(!isDark);
-    };
 
     const toggleMobileMenu = () => {
         setIsMobileMenuOpen(!isMobileMenuOpen);
@@ -77,7 +72,7 @@ const NavBar = () => {
                     ? 'bg-[#0a0e1a] border-b border-slate-800/50' 
                     : 'bg-white border-b border-slate-200'
             }`}>
-                <div className="max-w-7xl mx-auto px-4 lg:px-8">
+                <div className=" px-4 lg:px-8">
                     <div className="flex items-center justify-between h-20">
                         
                         {/* Logo Section */}

@@ -2,8 +2,11 @@ import {
   BookOpen, Award, TrendingUp, Clock, Target, 
   Calendar, CheckCircle, AlertCircle, BarChart3
 } from 'lucide-react';
+import { useTheme } from '../../../context/ThemeContext';
 
 const UserDashboard = () => {
+  const { isDark } = useTheme();
+
   const stats = [
     { 
       label: "Course Progress", 
@@ -66,14 +69,14 @@ const UserDashboard = () => {
   ];
 
   return (
-    <div className="min-h-screen bg-[#0a0e1a] p-8">
-      <div className="max-w-7xl mx-auto">
+    <div className={`min-h-screen ${isDark ? 'bg-[#0a0e1a]' : 'bg-slate-100'} p-8`}>
+      <div className="">
         {/* Header */}
         <div className="mb-8">
-          <h1 className="text-4xl font-bold text-white mb-2">
+          <h1 className={`text-4xl font-bold ${isDark ? 'text-white' : 'text-slate-900'} mb-2`}>
             Welcome Back, <span className="text-cyan-400">Student!</span>
           </h1>
-          <p className="text-slate-400">Here's what's happening with your learning today</p>
+          <p className={isDark ? 'text-slate-400' : 'text-slate-600'}>Here's what's happening with your learning today</p>
         </div>
 
         {/* Stats Grid */}
@@ -81,23 +84,23 @@ const UserDashboard = () => {
           {stats.map((stat, index) => (
             <div
               key={index}
-              className="bg-slate-900/60 border border-slate-800 rounded-2xl p-6 hover:border-cyan-500/50 transition-all duration-300"
+              className={`${isDark ? 'bg-slate-900/60 border-slate-800' : 'bg-white border-slate-200'} border rounded-2xl p-6 hover:border-cyan-500/50 transition-all duration-300`}
               style={{ animation: `fadeInUp 0.5s ease-out ${index * 0.1}s both` }}
             >
               <div className={`w-12 h-12 bg-gradient-to-br ${stat.color} rounded-xl flex items-center justify-center mb-4 shadow-lg`}>
                 <stat.icon className="text-white" size={24} />
               </div>
-              <p className="text-3xl font-bold text-white mb-1">{stat.value}</p>
-              <p className="text-sm text-slate-400 font-medium mb-2">{stat.label}</p>
-              <p className="text-xs text-slate-500">{stat.change}</p>
+              <p className={`text-3xl font-bold ${isDark ? 'text-white' : 'text-slate-900'} mb-1`}>{stat.value}</p>
+              <p className={`text-sm ${isDark ? 'text-slate-400' : 'text-slate-500'} font-medium mb-2`}>{stat.label}</p>
+              <p className={`text-xs ${isDark ? 'text-slate-500' : 'text-slate-400'}`}>{stat.change}</p>
             </div>
           ))}
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
           {/* Progress Circle */}
-          <div className="bg-slate-900/60 border border-slate-800 rounded-2xl p-6">
-            <h3 className="text-xl font-bold text-white mb-6 flex items-center gap-2">
+          <div className={`${isDark ? 'bg-slate-900/60 border-slate-800' : 'bg-white border-slate-200'} border rounded-2xl p-6`}>
+            <h3 className={`text-xl font-bold ${isDark ? 'text-white' : 'text-slate-900'} mb-6 flex items-center gap-2`}>
               <Target className="text-cyan-400" size={24} />
               Overall Progress
             </h3>
@@ -108,7 +111,7 @@ const UserDashboard = () => {
                     cx="80"
                     cy="80"
                     r="70"
-                    stroke="rgba(71, 85, 105, 0.3)"
+                    stroke={isDark ? 'rgba(71, 85, 105, 0.3)' : 'rgba(203, 213, 225, 0.5)'}
                     strokeWidth="12"
                     fill="none"
                   />
@@ -133,8 +136,8 @@ const UserDashboard = () => {
                 </svg>
                 <div className="absolute inset-0 flex items-center justify-center">
                   <div className="text-center">
-                    <p className="text-4xl font-bold text-white">75%</p>
-                    <p className="text-sm text-slate-400">Complete</p>
+                    <p className={`text-4xl font-bold ${isDark ? 'text-white' : 'text-slate-900'}`}>75%</p>
+                    <p className={`text-sm ${isDark ? 'text-slate-400' : 'text-slate-500'}`}>Complete</p>
                   </div>
                 </div>
               </div>
@@ -142,8 +145,8 @@ const UserDashboard = () => {
           </div>
 
           {/* Recent Activity */}
-          <div className="bg-slate-900/60 border border-slate-800 rounded-2xl p-6">
-            <h3 className="text-xl font-bold text-white mb-6 flex items-center gap-2">
+          <div className={`${isDark ? 'bg-slate-900/60 border-slate-800' : 'bg-white border-slate-200'} border rounded-2xl p-6`}>
+            <h3 className={`text-xl font-bold ${isDark ? 'text-white' : 'text-slate-900'} mb-6 flex items-center gap-2`}>
               <Clock className="text-purple-400" size={24} />
               Recent Activity
             </h3>
@@ -151,13 +154,13 @@ const UserDashboard = () => {
               {recentActivity.map((activity, index) => (
                 <div 
                   key={index} 
-                  className="flex items-start gap-3 p-3 rounded-xl bg-slate-800/30 hover:bg-slate-800/50 transition-all"
+                  className={`flex items-start gap-3 p-3 rounded-xl ${isDark ? 'bg-slate-800/30 hover:bg-slate-800/50' : 'bg-slate-100 hover:bg-slate-200'} transition-all`}
                 >
                   <div className={`w-2 h-2 rounded-full mt-2 ${
                     activity.status === 'completed' ? 'bg-emerald-400' : 'bg-orange-400'
                   } animate-pulse`}></div>
                   <div className="flex-1">
-                    <p className="font-semibold text-white text-sm">{activity.title}</p>
+                    <p className={`font-semibold ${isDark ? 'text-white' : 'text-slate-800'} text-sm`}>{activity.title}</p>
                     <p className={`text-xs ${activity.color} font-medium`}>{activity.subtitle}</p>
                     <p className="text-xs text-slate-500 mt-1">{activity.time}</p>
                   </div>
@@ -167,8 +170,8 @@ const UserDashboard = () => {
           </div>
 
           {/* Upcoming Classes */}
-          <div className="bg-slate-900/60 border border-slate-800 rounded-2xl p-6">
-            <h3 className="text-xl font-bold text-white mb-6 flex items-center gap-2">
+          <div className={`${isDark ? 'bg-slate-900/60 border-slate-800' : 'bg-white border-slate-200'} border rounded-2xl p-6`}>
+            <h3 className={`text-xl font-bold ${isDark ? 'text-white' : 'text-slate-900'} mb-6 flex items-center gap-2`}>
               <Calendar className="text-blue-400" size={24} />
               Upcoming Classes
             </h3>
@@ -176,14 +179,14 @@ const UserDashboard = () => {
               {upcomingClasses.map((cls, index) => (
                 <div 
                   key={index}
-                  className="flex items-center gap-3 p-3 rounded-xl bg-slate-800/30 hover:bg-slate-800/50 transition-all"
+                  className={`flex items-center gap-3 p-3 rounded-xl ${isDark ? 'bg-slate-800/30 hover:bg-slate-800/50' : 'bg-slate-100 hover:bg-slate-200'} transition-all`}
                 >
                   <div className={`w-3 h-12 ${cls.color} rounded-full`}></div>
                   <div className="flex-1">
-                    <p className="font-semibold text-white text-sm">{cls.subject}</p>
-                    <p className="text-xs text-slate-400">{cls.time} • {cls.day}</p>
+                    <p className={`font-semibold ${isDark ? 'text-white' : 'text-slate-800'} text-sm`}>{cls.subject}</p>
+                    <p className={`text-xs ${isDark ? 'text-slate-400' : 'text-slate-500'}`}>{cls.time} • {cls.day}</p>
                   </div>
-                  <CheckCircle className="text-slate-600" size={18} />
+                  <CheckCircle className={`${isDark ? 'text-slate-600' : 'text-slate-400'}`} size={18} />
                 </div>
               ))}
             </div>
@@ -191,8 +194,8 @@ const UserDashboard = () => {
         </div>
 
         {/* Course Progress */}
-        <div className="mt-6 bg-slate-900/60 border border-slate-800 rounded-2xl p-6">
-          <h3 className="text-xl font-bold text-white mb-6 flex items-center gap-2">
+        <div className={`mt-6 ${isDark ? 'bg-slate-900/60 border-slate-800' : 'bg-white border-slate-200'} border rounded-2xl p-6`}>
+          <h3 className={`text-xl font-bold ${isDark ? 'text-white' : 'text-slate-900'} mb-6 flex items-center gap-2`}>
             <BarChart3 className="text-emerald-400" size={24} />
             Course Progress Overview
           </h3>
@@ -205,10 +208,10 @@ const UserDashboard = () => {
             ].map((course, index) => (
               <div key={index} className="space-y-2">
                 <div className="flex items-center justify-between text-sm">
-                  <span className="text-white font-medium">{course.name}</span>
-                  <span className="text-slate-400">{course.progress}%</span>
+                  <span className={`${isDark ? 'text-white' : 'text-slate-800'} font-medium`}>{course.name}</span>
+                  <span className={`${isDark ? 'text-slate-400' : 'text-slate-500'}`}>{course.progress}%</span>
                 </div>
-                <div className="w-full bg-slate-800 rounded-full h-2 overflow-hidden">
+                <div className={`w-full ${isDark ? 'bg-slate-800' : 'bg-slate-200'} rounded-full h-2 overflow-hidden`}>
                   <div
                     className={`h-full ${course.color} rounded-full transition-all duration-1000 shadow-[0_0_10px_currentColor]`}
                     style={{ width: `${course.progress}%` }}

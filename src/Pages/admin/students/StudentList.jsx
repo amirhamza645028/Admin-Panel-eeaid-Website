@@ -81,7 +81,7 @@ const StudentList = () => {
   };
 
   return (
-    <div className="p-6 bg-slate-100 max-w-7xl mx-auto min-h-screen">
+    <div className="p-6 bg-slate-100  min-h-screen">
       {/* Header */}
       <div className="flex flex-col md:flex-row justify-between items-center mb-6 gap-4">
         <div>

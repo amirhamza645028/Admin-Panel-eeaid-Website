@@ -74,7 +74,7 @@ const ProgramList = () => {
   };
 
   return (
-    <div className="min-h-screen max-w-7xl mx-auto bg-gradient-to-br from-slate-50 to-blue-50 p-8">
+    <div className="min-h-screen  bg-gradient-to-br from-slate-50 to-blue-50 p-8">
       {/* Toast Notification */}
       {toast && (
         <div className="fixed top-4 right-4 z-50 animate-slideIn">

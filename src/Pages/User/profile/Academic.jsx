@@ -16,7 +16,7 @@ const Academic = () => {
 
   return (
     <div className="min-h-screen bg-[#0a0e1a] p-8">
-      <div className="max-w-7xl mx-auto">
+      <div className="">
         <h1 className="text-4xl font-bold text-white mb-8">Academic Records</h1>
 
         {/* Certificates */}

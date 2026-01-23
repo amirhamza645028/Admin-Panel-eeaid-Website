@@ -19,13 +19,15 @@ import CouponList from './Pages/admin/cupon/CouponList';
 import CouponAdd from './Pages/admin/cupon/CouponAdd';
 import CouponDetails from './Pages/admin/cupon/CouponDetails';
 import SubjectList from './Pages/admin/subjects/SubjectList';
-// import Home from './components/Home/Home';
+import Settings from './Pages/admin/settings/Settings';
+import Home from './components/Home/Home';
+
+import { ThemeProvider } from './context/ThemeContext';
+
 
 const router = createBrowserRouter([
   {
-      path:'/',
-      // element:<Home></Home>,
-      
+      path:'/',     
       // <NavBar></NavBar>,
       element:<AdminLayout></AdminLayout>,
       children:[
@@ -88,20 +90,26 @@ const router = createBrowserRouter([
         {
           path:'/subjects',
           element:<SubjectList></SubjectList>
+        },
+        {
+          path:'/settings',
+          element:<Settings></Settings>
         }
        
       ]
+  },
+  {
+    path:'/student-home',
+    element:<Home></Home>
   }
 ])
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-
-    <div className='max-w-7xl mx-auto'>
-      <RouterProvider router={router} />
-    </div>
-    
-  
-    
+    <ThemeProvider>
+      <div className='mx-auto'>
+        <RouterProvider router={router} />
+      </div>
+    </ThemeProvider>
   </React.StrictMode>
   )
