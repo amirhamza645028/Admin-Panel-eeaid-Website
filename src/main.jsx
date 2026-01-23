@@ -18,6 +18,7 @@ import UserDashboard from './Pages/User/profile/UserDashboard';
 import CouponList from './Pages/admin/cupon/CouponList';
 import CouponAdd from './Pages/admin/cupon/CouponAdd';
 import CouponDetails from './Pages/admin/cupon/CouponDetails';
+import SubjectList from './Pages/admin/subjects/SubjectList';
 // import Home from './components/Home/Home';
 
 const router = createBrowserRouter([
@@ -83,6 +84,10 @@ const router = createBrowserRouter([
         {
           path:'/coupons',
           element:<CouponList></CouponList>
+        },
+        {
+          path:'/subjects',
+          element:<SubjectList></SubjectList>
         }
        
       ]

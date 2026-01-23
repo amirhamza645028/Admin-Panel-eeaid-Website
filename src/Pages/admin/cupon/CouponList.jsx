@@ -4,6 +4,7 @@ import {
   Ticket, Calendar, Users, ToggleLeft, ToggleRight,
   TrendingUp, AlertCircle
 } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 const CouponList = () => {
   const [coupons, setCoupons] = useState([]);
@@ -177,13 +178,14 @@ const CouponList = () => {
           </h1>
           <p className="text-slate-600">Manage discount coupons and promotional codes</p>
         </div>
-        <button
+        <Link
+        to={'/coupons-add'}
           onClick={handleAddNew}
           className="flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-purple-600 to-pink-600 text-white rounded-xl font-semibold shadow-lg hover:shadow-xl hover:from-purple-700 hover:to-pink-700 transition-all duration-300 transform hover:-translate-y-0.5"
         >
           <Plus size={20} />
           Add New Coupon
-        </button>
+        </Link>
       </div>
 
       {/* Stats Cards */}
@@ -352,20 +354,22 @@ const CouponList = () => {
 
               {/* Actions */}
               <div className="flex gap-2">
-                <button
+                <Link
+                to={'/coupons-details'}
                   onClick={() => handleViewDetails(coupon.id)}
                   className="flex-1 flex items-center justify-center gap-2 px-4 py-2.5 bg-blue-100 text-blue-600 rounded-xl font-semibold hover:bg-blue-600 hover:text-white transition-all duration-300"
                 >
                   <Eye size={18} />
                   View
-                </button>
-                <button
+                </Link>
+                <Link
+                to={'/coupons-details'} 
                   onClick={() => handleEdit(coupon.id)}
                   className="flex-1 flex items-center justify-center gap-2 px-4 py-2.5 bg-purple-100 text-purple-600 rounded-xl font-semibold hover:bg-purple-600 hover:text-white transition-all duration-300"
                 >
                   <Edit size={18} />
                   Edit
-                </button>
+                </Link >
                 <button
                   onClick={() => handleDelete(coupon.id)}
                   className="px-4 py-2.5 bg-red-100 text-red-600 rounded-xl font-semibold hover:bg-red-600 hover:text-white transition-all duration-300"
@@ -388,13 +392,14 @@ const CouponList = () => {
               : 'Create your first coupon to get started'}
           </p>
           {!searchTerm && statusFilter === 'all' && (
-            <button
+            <Link
+            to={'/coupons-add'}
               onClick={handleAddNew}
               className="inline-flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-purple-600 to-pink-600 text-white rounded-xl font-semibold"
             >
               <Plus size={20} />
               Add New Coupon
-            </button>
+            </Link>
           )}
         </div>
       )}
