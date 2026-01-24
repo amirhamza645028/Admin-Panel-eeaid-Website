@@ -22,6 +22,8 @@ import { motion } from 'framer-motion';
 import dashboardData from '../daat/AdminHome1.json';
 import AdminNavbar from './AdminNavbar'
 import { div } from 'framer-motion/client';
+import AdminMiniCard from './AdminMiniCard';
+import { cardColors } from '../components/shared/CardStyle';
 // Icon mapping
 const iconMap = {
   Users: Users,
@@ -45,21 +47,23 @@ const AdminHome1 = () => {
         {/* Top Stats Cards */}
         {dashboardData.statsCards.map((card) => {
           const Icon = iconMap[card.icon];
-          const colorClasses = {
-            blue: "bg-blue-50 text-blue-600",
-            green: "bg-emerald-50 text-emerald-600",
-            purple: "bg-purple-50 text-purple-600",
-            orange: "bg-orange-50 text-orange-600"
-          };
+          // const colorClasses = {
+          //   blue: "bg-blue-50 text-blue-600",
+          //   green: "bg-emerald-50 text-emerald-600",
+          //   purple: "bg-purple-50 text-purple-600",
+          //   orange: "bg-orange-50 text-orange-600"
+          // };
           
           return (
-            <motion.div 
-              key={card.id}
-              whileHover={{ y: -5, boxShadow: "0 10px 25px -5px rgba(0, 0, 0, 0.1)" }}
-              className="bg-white p-3 rounded-xl shadow-sm border border-gray-300"
-            >
-              <div className="flex justify-between items-start">
-                <div className={`p-3 rounded-lg ${colorClasses[card.color]}`}>
+            // <motion.div 
+            //   key={card.id}
+            //   whileHover={{ y: -5, boxShadow: "0 10px 25px -5px rgba(0, 0, 0, 0.1)" }}
+            
+            //   className="bg-white p-3 rounded-xl shadow-sm border border-gray-300"
+            // >
+              <AdminMiniCard key={card.id} color={card.cardColors} >
+                  <div className="flex justify-between items-start">
+                <div className={`p-3 rounded-lg `}>
                   <Icon className="w-3 h-3" />
                 </div>
                 {card.badge && (
@@ -72,7 +76,22 @@ const AdminHome1 = () => {
                 <h3 className="text-gray-500 text-sm font-medium">{card.title}</h3>
                 <p className="text-2xl font-bold text-slate-800 mt-1">{card.count}</p>
               </div>
-            </motion.div>
+              </AdminMiniCard>
+              // <div className="flex justify-between items-start">
+              //   <div className={`p-3 rounded-lg ${colorClasses[card.color]}`}>
+              //     <Icon className="w-3 h-3" />
+              //   </div>
+              //   {card.badge && (
+              //     <span className="text-xs font-medium bg-gray-300 px-2 py-1 rounded-full text-gray-600">
+              //       {card.badge}
+              //     </span>
+              //   )}
+              // </div>
+              // <div className="mt-2">
+              //   <h3 className="text-gray-500 text-sm font-medium">{card.title}</h3>
+              //   <p className="text-2xl font-bold text-slate-800 mt-1">{card.count}</p>
+              // </div>
+            // </motion.div>
           );
         })}
 
@@ -159,20 +178,47 @@ const AdminHome1 = () => {
         {/* Mid Stats Cards */}
         {dashboardData.midStats.map((stat) => {
           const Icon = iconMap[stat.icon];
-          const bgColors = {
-            blue: "bg-blue-500",
-            green: "bg-emerald-400",
-            indigo: "bg-indigo-500",
-            purple: "bg-purple-500"
-          };
+          // const bgColors = {
+          //   blue: "bg-blue-500",
+          //   green: "bg-emerald-400",
+          //   indigo: "bg-indigo-500",
+          //   purple: "bg-purple-500"
+          // };
           
           return (
             <motion.div 
-              key={stat.id}
-              whileHover={{ scale: 1.02 }}
-              className={`${bgColors[stat.bg]} p-6 rounded-xl shadow-lg text-white relative overflow-hidden`}
+              // key={stat.id}
+              // whileHover={{ scale: 1.02 }}
+              // className={`${bgColors[stat.bg]} p-6 rounded-xl shadow-lg text-white relative overflow-hidden`}
             >
-              <div className="absolute top-0 right-0 p-4 opacity-20">
+              <AdminMiniCard key={stat.id} color={stat.bg}>
+
+                 {/* Background Icon */}
+      <div className="absolute top-0 right-0 p-4 opacity-30">
+        <Icon className="w-16 h-16" />
+      </div>
+
+      {/* Content */}
+      <div className="relative z-10">
+        <div className="flex items-center gap-2 mb-2 opacity-90">
+          <Icon className="w-5 h-5" />
+          <span className="text-sm font-medium">
+            {stat.title}
+          </span>
+        </div>
+
+        <div className="flex items-end gap-2">
+          <h3 className="text-2xl font-bold">
+            {stat.value}
+          </h3>
+          <span className="text-xs opacity-80 mb-1 bg-white/20 px-2 py-0.5 rounded">
+            {stat.sub}
+          </span>
+        </div>
+      </div>
+
+              </AdminMiniCard>
+              {/* <div className="absolute top-0 right-0 p-4 opacity-30">
                 <Icon className="w-16 h-16" />
               </div>
               <div className="relative z-10">
@@ -184,7 +230,7 @@ const AdminHome1 = () => {
                   <h3 className="text-2xl font-bold">{stat.value}</h3>
                   <span className="text-xs opacity-80 mb-1 bg-white/20 px-2 py-0.5 rounded">{stat.sub}</span>
                 </div>
-              </div>
+              </div> */}
             </motion.div>
           );
         })}
