@@ -37,20 +37,26 @@ const BatchList = () => {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50 p-8">
+    <div className="min-h-screen p-8" style={{ backgroundColor: '#F5F7FA' }}>
       {/* Toast Notification */}
       {toast && (
         <div className="fixed top-4 right-4 z-50 animate-slideIn">
-          <div className={`px-6 py-4 rounded-xl shadow-2xl flex items-center gap-3 ${
-            toast.type === 'success' 
-              ? 'bg-gradient-to-r from-emerald-500 to-emerald-600' 
-              : toast.type === 'info'
-              ? 'bg-gradient-to-r from-blue-500 to-blue-600'
-              : 'bg-gradient-to-r from-orange-500 to-orange-600'
-          } text-white`}>
+          <div 
+            className="px-6 py-4 rounded-xl shadow-2xl flex items-center gap-3 text-white"
+            style={{
+              background: toast.type === 'success' 
+                ? 'linear-gradient(135deg, #4A90E2 0%, #357ABD 100%)'
+                : toast.type === 'info'
+                ? 'linear-gradient(135deg, #4A90E2 0%, #5BA3F5 100%)'
+                : 'linear-gradient(135deg, #F97316 0%, #EA580C 100%)'
+            }}
+          >
             <div className="w-2 h-2 rounded-full bg-white animate-ping"></div>
             <span className="font-medium">{toast.message}</span>
-            <button onClick={() => setToast(null)} className="ml-2 hover:bg-white/20 rounded p-1">
+            <button 
+              onClick={() => setToast(null)} 
+              className="ml-2 hover:bg-white/20 rounded p-1 transition"
+            >
               <X size={18} />
             </button>
           </div>
@@ -59,22 +65,39 @@ const BatchList = () => {
 
       {/* Header */}
       <div className="flex items-center justify-between mb-8">
-        <h1 className="text-4xl font-bold bg-gradient-to-r from-slate-800 to-slate-600 bg-clip-text text-transparent">
-          All Batches
-        </h1>
-        <Link to={'/batches/new'}
+        <div>
+          <h1 
+            className="text-4xl font-bold mb-1"
+            style={{ color: '#4A90E2' }}
+          >
+            All Batches
+          </h1>
+          <p className="text-gray-600 text-sm">
+            Manage your academic batches and programs
+          </p>
+        </div>
+        
+        <Link 
+          to={'/batches/new'}
           onClick={handleAddNew}
-          className="flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-cyan-500 to-cyan-600 text-white rounded-xl font-semibold shadow-lg hover:shadow-xl hover:from-cyan-600 hover:to-cyan-700 transition-all duration-300 transform hover:-translate-y-0.5"
+          className="flex items-center gap-2 px-6 py-3 text-white rounded-xl font-semibold shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-0.5"
+          style={{ 
+            background: 'linear-gradient(135deg, #4A90E2 0%, #357ABD 100%)',
+            boxShadow: '0 4px 15px rgba(74, 144, 226, 0.3)'
+          }}
         >
           <Plus size={20} />
           Add New Batch
-        </Link >
+        </Link>
       </div>
 
       {/* Batches Table */}
-      <div className="bg-white/80 backdrop-blur-sm rounded-2xl shadow-xl overflow-hidden border border-slate-200/50">
+      <div className="bg-white rounded-2xl shadow-xl overflow-hidden border border-gray-100">
         {/* Table Header */}
-        <div className="bg-gradient-to-r from-slate-800 to-slate-700 px-8 py-5">
+        <div 
+          className="px-8 py-5"
+          style={{ backgroundColor: '#4A90E2' }}
+        >
           <div className="grid grid-cols-12 gap-6 text-sm font-semibold text-white uppercase tracking-wider">
             <div className="col-span-4">Batch Name</div>
             <div className="col-span-3">Program</div>
@@ -85,11 +108,11 @@ const BatchList = () => {
         </div>
 
         {/* Table Body */}
-        <div className="divide-y divide-slate-200/50">
+        <div className="divide-y divide-gray-100">
           {batches.map((batch, index) => (
             <div
               key={batch.id}
-              className="px-8 py-6 hover:bg-gradient-to-r hover:from-blue-50/50 hover:to-indigo-50/50 transition-all duration-300 group"
+              className="px-8 py-6 hover:bg-blue-50/50 transition-all duration-300 group"
               style={{
                 animation: `fadeInUp 0.5s ease-out ${index * 0.1}s both`
               }}
@@ -97,29 +120,53 @@ const BatchList = () => {
               <div className="grid grid-cols-12 gap-6 items-center">
                 {/* Batch Name */}
                 <div className="col-span-4">
-                  <h3 className="text-lg font-bold text-slate-800 group-hover:text-blue-600 transition-colors">
+                  <h3 
+                    className="text-lg font-bold transition-colors"
+                    style={{ color: '#2C3E50' }}
+                  >
                     {batch.name}
                   </h3>
                 </div>
 
                 {/* Program */}
                 <div className="col-span-3">
-                    <p className="text-sm text-slate-500 mt-0.5">{batch.program}</p>
+                  <div className="flex items-center gap-2">
+                    <span 
+                      className="px-3 py-1 rounded-lg text-sm font-medium"
+                      style={{ 
+                        backgroundColor: '#FFF3E0',
+                        color: '#F97316'
+                      }}
+                    >
+                      {batch.program}
+                    </span>
+                  </div>
                 </div>
 
                 {/* Students */}
                 <div className="col-span-2">
-                    <p className="text-sm text-slate-500 mt-0.5">{batch.students}</p>
+                  <div className="flex items-center gap-2">
+                    <div 
+                      className="w-10 h-10 rounded-full flex items-center justify-center font-bold text-sm"
+                      style={{ 
+                        backgroundColor: '#E3F2FD',
+                        color: '#4A90E2'
+                      }}
+                    >
+                      {batch.students}
+                    </div>
+                    <span className="text-sm text-gray-500">students</span>
+                  </div>
                 </div>
 
                 {/* Date Range */}
                 <div className="col-span-2">
                   <div className="flex flex-col gap-1">
-                    <span className="text-sm font-medium text-slate-700">
+                    <span className="text-sm font-medium text-gray-700">
                       {batch.startDate}
                     </span>
-                    <span className="text-xs text-slate-400">to</span>
-                    <span className="text-sm font-medium text-slate-700">
+                    <span className="text-xs text-gray-400">to</span>
+                    <span className="text-sm font-medium text-gray-700">
                       {batch.endDate}
                     </span>
                   </div>
@@ -127,16 +174,43 @@ const BatchList = () => {
 
                 {/* Actions */}
                 <div className="col-span-1 flex items-center justify-end gap-3">
-                  <Link to={`/batches/edit/${batch.id}`}
+                  <Link 
+                    to={`/batches/edit/${batch.id}`}
                     onClick={() => handleEdit(batch)}
-                    className="p-3 bg-blue-100 text-blue-600 rounded-xl hover:bg-blue-600 hover:text-white transition-all duration-300 shadow-md hover:shadow-lg transform hover:scale-110"
+                    className="p-3 rounded-xl transition-all duration-300 shadow-md hover:shadow-lg transform hover:scale-110"
+                    style={{ 
+                      backgroundColor: '#FFF3E0',
+                      color: '#F97316'
+                    }}
+                    onMouseEnter={(e) => {
+                      e.currentTarget.style.backgroundColor = '#F97316';
+                      e.currentTarget.style.color = '#FFFFFF';
+                    }}
+                    onMouseLeave={(e) => {
+                      e.currentTarget.style.backgroundColor = '#FFF3E0';
+                      e.currentTarget.style.color = '#F97316';
+                    }}
                     title="Edit Batch"
                   >
                     <Edit size={18} />
                   </Link>
-                  <Link to={`/batches/${batch.id}`}
+                  
+                  <Link 
+                    to={`/batches/${batch.id}`}
                     onClick={() => handleViewDetails(batch)}
-                    className="p-3 bg-indigo-100 text-indigo-600 rounded-xl hover:bg-indigo-600 hover:text-white transition-all duration-300 shadow-md hover:shadow-lg transform hover:scale-110"
+                    className="p-3 rounded-xl transition-all duration-300 shadow-md hover:shadow-lg transform hover:scale-110"
+                    style={{ 
+                      backgroundColor: '#E3F2FD',
+                      color: '#4A90E2'
+                    }}
+                    onMouseEnter={(e) => {
+                      e.currentTarget.style.backgroundColor = '#4A90E2';
+                      e.currentTarget.style.color = '#FFFFFF';
+                    }}
+                    onMouseLeave={(e) => {
+                      e.currentTarget.style.backgroundColor = '#E3F2FD';
+                      e.currentTarget.style.color = '#4A90E2';
+                    }}
                     title="View Details"
                   >
                     <ArrowRight size={18} />
@@ -148,11 +222,28 @@ const BatchList = () => {
         </div>
       </div>
 
+      {/* Empty State */}
       {batches.length === 0 && (
-        <div className="text-center py-16 bg-white/80 backdrop-blur-sm rounded-2xl shadow-xl mt-8">
+        <div className="text-center py-16 bg-white rounded-2xl shadow-xl mt-8 border border-gray-100">
           <div className="text-6xl mb-4">📚</div>
-          <h3 className="text-2xl font-bold text-slate-700 mb-2">No Batches Yet</h3>
-          <p className="text-slate-500 mb-6">Create your first batch to get started</p>
+          <h3 
+            className="text-2xl font-bold mb-2"
+            style={{ color: '#2C3E50' }}
+          >
+            No Batches Yet
+          </h3>
+          <p className="text-gray-500 mb-6">
+            Create your first batch to get started
+          </p>
+          <button
+            onClick={handleAddNew}
+            className="px-6 py-3 text-white rounded-xl font-semibold shadow-lg hover:shadow-xl transition-all"
+            style={{ 
+              background: 'linear-gradient(135deg, #4A90E2 0%, #357ABD 100%)'
+            }}
+          >
+            Create First Batch
+          </button>
         </div>
       )}
 
@@ -181,6 +272,17 @@ const BatchList = () => {
 
         .animate-slideIn {
           animation: slideIn 0.3s ease-out;
+        }
+
+        @keyframes ping {
+          75%, 100% {
+            transform: scale(2);
+            opacity: 0;
+          }
+        }
+
+        .animate-ping {
+          animation: ping 1s cubic-bezier(0, 0, 0.2, 1) infinite;
         }
       `}</style>
     </div>
