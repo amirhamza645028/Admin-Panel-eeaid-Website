@@ -1,45 +1,6 @@
 import React, { useState } from 'react';
 import { Play, MessageCircle, Info, CheckCircle, XCircle } from 'lucide-react';
-
-// TrueFalse.json এর data (তুমি এটা import করবে)
-const quizData = [
-  {
-    "id": 1,
-    "question": "Which the following statements about the human heart is FALSE?",
-    "options": [
-      { "id": "A", "text": "The human heart has four chambers.", "answer": true },
-      { "id": "B", "text": "The sinoatrial node is the heart's natural pacemaker", "answer": true },
-      { "id": "C", "text": "Pulmonary arties carry oxygenated blood", "answer": false },
-      { "id": "D", "text": "The average adult beats 60-100 minute.", "answer": false },
-      { "id": "E", "text": "The heart is located beats the thoracic cavity", "answer": true }
-    ],
-    "solution": "The pulmonary arteries carry deoxygenated blood from the heart to the lungs, not oxygenated blood."
-  },
-  {
-    "id": 2,
-    "question": "Lymph superior to umbilicus on ant. Abdominal wall goes to:",
-    "options": [
-      { "id": "A", "text": "Internal iliac", "answer": true },
-      { "id": "B", "text": "External iliac", "answer": false },
-      { "id": "C", "text": "Iliac", "answer": false },
-      { "id": "D", "text": "Para aortic", "answer": false },
-      { "id": "E", "text": "Pudendal iliac", "answer": false }
-    ],
-    "solution": "Lymph superior to the umbilicus drains to the internal iliac lymph nodes."
-  },
-  {
-    "id": 3,
-    "question": "Lateral to psoas major muscle, following structures are related:",
-    "options": [
-      { "id": "A", "text": "Ureter", "answer": true },
-      { "id": "B", "text": "Genital branch of genitofemoral nerve", "answer": false },
-      { "id": "C", "text": "Obturator nerve", "answer": true },
-      { "id": "D", "text": "Pudendal nerve", "answer": true },
-      { "id": "E", "text": "Iliohypogastric nerve", "answer": true }
-    ],
-    "solution": "Multiple structures lie lateral to the psoas major muscle."
-  }
-];
+import TrueFalseData from '../../../../daat/TrueFalseData.json'
 
 const TrueFalse = () => {
   const [userAnswers, setUserAnswers] = useState({});
@@ -62,14 +23,14 @@ const TrueFalse = () => {
 
   // Check if answer is correct
   const isCorrect = (questionId, optionId, answer) => {
-    const question = quizData.find(q => q.id === questionId);
+    const question = TrueFalseData.find(q => q.id === questionId);
     const option = question.options.find(o => o.id === optionId);
     return userAnswers[questionId]?.[optionId] === option.answer;
   };
 
   // Check if answer is wrong
   const isWrong = (questionId, optionId) => {
-    const question = quizData.find(q => q.id === questionId);
+    const question = TrueFalseData.find(q => q.id === questionId);
     const option = question.options.find(o => o.id === optionId);
     const userAnswer = userAnswers[questionId]?.[optionId];
     return userAnswer !== undefined && userAnswer !== option.answer;
@@ -89,7 +50,7 @@ const TrueFalse = () => {
     let wrong = 0;
     let total = 0;
 
-    quizData.forEach(question => {
+    TrueFalseData.forEach(question => {
       question.options.forEach(option => {
         total++;
         if (userAnswers[question.id]?.[option.id] === option.answer) {
@@ -126,20 +87,25 @@ const TrueFalse = () => {
           </div>
 
           {/* Score Card */}
-          <div className="bg-white rounded-2xl shadow-lg p-8 border-2" style={{ borderColor: '#5E89C1' }}>
+          <div className="bg-white rounded-2xl shadow-lg p-8 border-2" style={{ borderColor: '#D4E157' }}>
             <div className="text-center mb-8">
               <div 
+              style={{ 
+            background: 'linear-gradient(135deg, #4A90E2 0%, #357ABD 100%)',
+            boxShadow: '0 8px 20px rgba(212, 225, 87, 0.4)'
+            // boxShadow: '0 4px 15px rgba(74, 144, 226, 0.3)'
+          }}
                 className="inline-block px-8 py-6 rounded-2xl mb-4"
-                style={{ 
-                  background: 'linear-gradient(135deg, #D4E157 0%, #C0CA33 100%)',
-                  boxShadow: '0 8px 20px rgba(212, 225, 87, 0.4)'
-                }}
+                // style={{ 
+                //   background: 'linear-gradient(135deg, #D4E157 0%, #C0CA33 100%)',
+                //   boxShadow: '0 8px 20px rgba(212, 225, 87, 0.4)'
+                // }}
               >
-                <p className="text-gray-700 text-sm font-semibold mb-1">Your Score</p>
+                <p className="text-shadow-white text-sm font-semibold mb-1">Your Score</p>
                 <p className="text-6xl font-bold text-gray-800">
                   {percentage}%
                 </p>
-                <p className="text-xl font-semibold text-gray-700 mt-2">
+                <p className="text-xl font-semibold text-shadow-white mt-2">
                   {results.correct} out of {results.total} - Well done!
                 </p>
               </div>
@@ -207,7 +173,7 @@ const TrueFalse = () => {
             <div className="text-right">
               <p className="text-sm text-gray-500">Progress</p>
               <p className="text-xl font-bold" style={{ color: '#5E89C1' }}>
-                {Object.keys(userAnswers).length}/{quizData.length}
+                {Object.keys(userAnswers).length}/{TrueFalseData.length}
               </p>
             </div>
           </div>
@@ -215,7 +181,7 @@ const TrueFalse = () => {
 
         {/* Questions */}
         <div className="space-y-6">
-          {quizData.map((question, qIndex) => (
+          {TrueFalseData.map((question, qIndex) => (
             <div 
               key={question.id}
               className="bg-white rounded-2xl shadow-lg p-6 border-2 transition-all hover:shadow-xl"
@@ -227,7 +193,7 @@ const TrueFalse = () => {
                   className="flex-shrink-0 w-10 h-10 rounded-full flex items-center justify-center font-bold text-white"
                   style={{ backgroundColor: '#5E89C1' }}
                 >
-                  {qIndex + 1}
+                  {String.fromCharCode(65 + qIndex)}
                 </div>
                 <h3 className="text-lg font-bold text-gray-800 flex-1">
                   {question.question}
@@ -235,68 +201,90 @@ const TrueFalse = () => {
               </div>
 
               {/* Options */}
-              <div className="space-y-3 mb-6">
+              <div className="space-y-4 mb-6">
                 {question.options.map((option) => {
                   const answered = userAnswers[question.id]?.[option.id] !== undefined;
                   const correct = isCorrect(question.id, option.id, option.answer);
                   const wrong = isWrong(question.id, option.id);
+                  const userAnswer = userAnswers[question.id]?.[option.id];
+                  
+                  // Determine background color based on answer state
+                  let bgColor = 'bg-white';
+                  let borderColor = 'border-gray-200';
+                  let textColor = 'text-gray-800';
+                  
+                  if (wrong) {
+                    bgColor = 'bg-red-50';
+                    borderColor = 'border-red-300';
+                    textColor = 'text-red-700';
+                  } else if (correct && answered) {
+                    bgColor = 'bg-green-50';
+                    borderColor = 'border-green-300';
+                    textColor = 'text-green-700';
+                  } else if (answered && !correct && !wrong) {
+                    bgColor = 'bg-blue-50';
+                    borderColor = 'border-blue-300';
+                    textColor = 'text-blue-700';
+                  }
 
                   return (
                     <div
                       key={option.id}
-                      className={`p-4 rounded-xl border-2 transition-all ${
-                        wrong 
-                          ? 'bg-red-50 border-red-300' 
-                          : correct && answered
-                          ? 'bg-green-50 border-green-300'
-                          : 'bg-gray-50 border-gray-200 hover:border-blue-300'
-                      }`}
+                      className={`p-4 rounded-xl border-2 transition-all ${bgColor} ${borderColor} ${answered ? 'shadow-sm' : 'hover:shadow-md'}`}
                     >
                       <div className="flex items-center justify-between gap-4">
                         <div className="flex items-center gap-3 flex-1">
+                          {/* Option letter with background */}
+                          <div className={`flex-shrink-0 w-8 h-8 rounded-md flex items-center justify-center font-bold ${answered && wrong ? 'bg-red-100 text-red-700' : answered && correct ? 'bg-green-100 text-green-700' : 'bg-gray-100 text-gray-700'}`}>
+                            {option.id}
+                          </div>
+                          
+                          {/* Option text */}
+                          <span className={`font-medium ${textColor}`}>
+                            {option.text}
+                          </span>
+                          
+                          {/* Answer status icons */}
                           {answered && (
                             wrong ? (
-                              <XCircle className="text-red-500 flex-shrink-0" size={20} />
+                              <XCircle className="text-red-500 flex-shrink-0 ml-2" size={20} />
                             ) : correct ? (
-                              <CheckCircle className="text-green-500 flex-shrink-0" size={20} />
+                              <CheckCircle className="text-green-500 flex-shrink-0 ml-2" size={20} />
                             ) : null
                           )}
-                          <span className={`font-medium ${
-                            wrong ? 'text-red-700' : correct && answered ? 'text-green-700' : 'text-gray-800'
-                          }`}>
-                            {option.id}. {option.text}
-                          </span>
                         </div>
 
+                        {/* True/False Buttons - Like screenshot */}
                         <div className="flex gap-2 flex-shrink-0">
                           <button
                             onClick={() => handleAnswer(question.id, option.id, true)}
                             disabled={submitted}
-                            className={`btn btn-sm ${
-                              userAnswers[question.id]?.[option.id] === true
-                                ? wrong
-                                  ? 'bg-red-500 hover:bg-red-600 text-white border-red-500'
-                                  : 'bg-green-500 hover:bg-green-600 text-white border-green-500'
-                                : 'btn-outline'
-                            }`}
-                            style={
-                              userAnswers[question.id]?.[option.id] !== true
-                                ? { borderColor: '#5E89C1', color: '#5E89C1' }
-                                : {}
-                            }
+                            className={`
+                              w-16 h-8 rounded-lg font-bold transition-all flex items-center justify-center
+                              ${userAnswer === true ? 
+                                wrong ? 
+                                  'bg-red-500 text-white border-2 border-red-600' : 
+                                  'bg-green-500 text-white border-2 border-green-600' : 
+                                'bg-white text-green-600 border-2 border-green-600 hover:bg-green-50'
+                              }
+                              ${submitted && userAnswer !== true ? 'opacity-50 cursor-not-allowed' : ''}
+                            `}
                           >
                             True
                           </button>
                           <button
                             onClick={() => handleAnswer(question.id, option.id, false)}
                             disabled={submitted}
-                            className={`btn btn-sm ${
-                              userAnswers[question.id]?.[option.id] === false
-                                ? wrong
-                                  ? 'bg-red-500 hover:bg-red-600 text-white border-red-500'
-                                  : 'btn-outline'
-                                : 'btn-outline'
-                            }`}
+                            className={`
+                              w-16 h-8 rounded-lg font-bold transition-all flex items-center justify-center
+                              ${userAnswer === false ? 
+                                wrong ? 
+                                  'bg-red-500 text-white border-2 border-red-600' : 
+                                  'bg-white text-red-600 border-2 border-red-600' : 
+                                'bg-white text-red-600 border-2 border-red-600 hover:bg-red-50'
+                              }
+                              ${submitted && userAnswer !== false ? 'opacity-50 cursor-not-allowed' : ''}
+                            `}
                           >
                             False
                           </button>
@@ -307,28 +295,34 @@ const TrueFalse = () => {
                 })}
               </div>
 
-              {/* Action Buttons */}
+              {/* Action Buttons - With icons like screenshot */}
               <div className="flex gap-3 pt-4 border-t border-gray-200 flex-wrap">
                 <button 
-                  className="btn btn-sm gap-2"
-                  style={{ backgroundColor: '#E3F2FD', color: '#5E89C1', border: 'none' }}
+                  className="flex items-center gap-2 px-4 py-2 rounded-lg font-medium transition-colors hover:bg-blue-50"
+                  style={{ color: '#5E89C1' }}
                 >
-                  <Play size={16} />
+                  <div className="w-8 h-8 rounded-full bg-blue-100 flex items-center justify-center">
+                    <Play size={16} style={{ color: '#5E89C1' }} />
+                  </div>
                   Watch Lecture
                 </button>
                 <button 
-                  className="btn btn-sm gap-2"
-                  style={{ backgroundColor: '#F3E5F5', color: '#9C27B0', border: 'none' }}
+                  className="flex items-center gap-2 px-4 py-2 rounded-lg font-medium transition-colors hover:bg-purple-50"
+                  style={{ color: '#9C27B0' }}
                 >
-                  <MessageCircle size={16} />
+                  <div className="w-8 h-8 rounded-full bg-purple-100 flex items-center justify-center">
+                    <MessageCircle size={16} style={{ color: '#9C27B0' }} />
+                  </div>
                   Ask Teacher
                 </button>
                 <button 
                   onClick={() => toggleSolution(question.id)}
-                  className="btn btn-sm gap-2"
-                  style={{ backgroundColor: '#E8F5E9', color: '#4CAF50', border: 'none' }}
+                  className="flex items-center gap-2 px-4 py-2 rounded-lg font-medium transition-colors hover:bg-green-50"
+                  style={{ color: '#4CAF50' }}
                 >
-                  <Info size={16} />
+                  <div className="w-8 h-8 rounded-full bg-green-100 flex items-center justify-center">
+                    <Info size={16} style={{ color: '#4CAF50' }} />
+                  </div>
                   View Solution
                 </button>
               </div>
@@ -352,12 +346,13 @@ const TrueFalse = () => {
           <button
             onClick={handleSubmit}
             disabled={Object.keys(userAnswers).length === 0}
-            className="px-12 py-4 text-white rounded-xl font-bold text-lg shadow-lg hover:shadow-xl transition-all disabled:opacity-50 disabled:cursor-not-allowed"
+            className="px-12 py-4 text-white rounded-xl font-bold text-lg shadow-lg hover:shadow-xl transition-all disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center gap-2 mx-auto"
             style={{ 
               background: 'linear-gradient(135deg, #5E89C1 0%, #4A7BA7 100%)'
             }}
           >
-            Submit
+            <CheckCircle size={20} />
+            Submit Quiz
           </button>
         </div>
       </div>

@@ -1,0 +1,38 @@
+[
+  {
+    "id": 1,
+    "question": "Which the following statements about the human heart is FALSE?",
+    "options": [
+      { "id": "A", "text": "The human heart has four chambers.", "answer": true },
+      { "id": "B", "text": "The sinoatrial node is the heart's natural pacemaker", "answer": true },
+      { "id": "C", "text": "Pulmonary arties carry oxygenated blood", "answer": false },
+      { "id": "D", "text": "The average adult beats 60-100 minute.", "answer": false },
+      { "id": "E", "text": "The heart is located beats the thoracic cavity", "answer": true }
+    ],
+    "solution": "The pulmonary arteries carry deoxygenated blood from the heart to the lungs, not oxygenated blood."
+  },
+  {
+    "id": 2,
+    "question": "Lymph superior to umbilicus on ant. Abdominal wall goes to:",
+    "options": [
+      { "id": "A", "text": "Internal iliac", "answer": true },
+      { "id": "B", "text": "External iliac", "answer": false },
+      { "id": "C", "text": "Iliac", "answer": false },
+      { "id": "D", "text": "Para aortic", "answer": false },
+      { "id": "E", "text": "Pudendal iliac", "answer": false }
+    ],
+    "solution": "Lymph superior to the umbilicus drains to the internal iliac lymph nodes."
+  },
+  {
+    "id": 3,
+    "question": "Lateral to psoas major muscle, following structures are related:",
+    "options": [
+      { "id": "A", "text": "Ureter", "answer": true },
+      { "id": "B", "text": "Genital branch of genitofemoral nerve", "answer": false },
+      { "id": "C", "text": "Obturator nerve", "answer": true },
+      { "id": "D", "text": "Pudendal nerve", "answer": true },
+      { "id": "E", "text": "Iliohypogastric nerve", "answer": true }
+    ],
+    "solution": "Multiple structures lie lateral to the psoas major muscle."
+  }
+]
