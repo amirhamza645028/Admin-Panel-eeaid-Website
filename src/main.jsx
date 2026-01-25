@@ -23,6 +23,7 @@ import CouponDetails from './Pages/admin/cupon/CouponDetails';
 import SubjectList from './Pages/admin/subjects/SubjectList';
 import Settings from './Pages/admin/settings/Settings';
 import Home from './components/Home/Home';
+import TrueFalse from './Pages/User/examSection/TrueFalse/TrueFalse';
 
 const router = createBrowserRouter([
   {
@@ -101,6 +102,10 @@ const router = createBrowserRouter([
         {
           path:'/settings',
           element:<Settings></Settings>
+        },
+        {
+          path:'/User-tureFalse',
+          element:<TrueFalse></TrueFalse>
         }
        
       ]
