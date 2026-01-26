@@ -9,3 +9,4 @@ export const cardColors = {
   indigo: "bg-indigo-500",
   purple: "bg-purple-500",
 };
+export const buttonColor = "bg-gradient-to-r from-blue-500 to-blue-600 hover:from-blue-600 hover:to-blue-700 text-white";

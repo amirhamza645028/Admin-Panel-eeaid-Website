@@ -24,6 +24,8 @@ import SubjectList from './Pages/admin/subjects/SubjectList';
 import Settings from './Pages/admin/settings/Settings';
 import Home from './components/Home/Home';
 import TrueFalse from './Pages/User/examSection/TrueFalse/TrueFalse';
+import CourseBatchSingleCard from './Pages/User/course/allCourse/CourseBatchSingleCard';
+import MCQ from './Pages/User/course/myCourse/MCQ/MCQ';
 
 const router = createBrowserRouter([
   {
@@ -106,6 +108,14 @@ const router = createBrowserRouter([
         {
           path:'/User-tureFalse',
           element:<TrueFalse></TrueFalse>
+        },
+        {
+          path:'/user-allCourses',
+          element:<CourseBatchSingleCard></CourseBatchSingleCard>
+        },
+        {
+          path:'/user-mcq',
+          element:<MCQ></MCQ>
         }
        
       ]

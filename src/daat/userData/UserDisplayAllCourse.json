@@ -1,0 +1,259 @@
+[
+  {
+    "id": 1,
+    "title": "Online P-1 Medicine Friday Best Care Live Batch July-2026",
+    "type": "Online",
+    "batch": "Friday Best Care Batch",
+    "session": "July-26 P-1 Candidate",
+    "branch": "Online",
+    "startDate": "09-Jan-26",
+    "duration": "3:00PM",
+    "status": "OPEN",
+    "tag": "P01",
+    "color": "https://ibb.co.com/MkF2WBF1",
+    "instructor": "MON, TUE",
+    "description": "সাপ্তাহিক এক্সক্লুসিভ পার্ট ওয়ান পরীক্ষার জন্য Bailey & Love's অত্যন্ত গুরুত্বপূর্ণ। শুধু Bailey & Love's পড়ে সাজারি পার্টওয়ান পাস করা যাবেনা, কিন্তু সাজারি পার্ট ওয়ান পাস করার জন্য Bailey & Love's পড়া লাগবেই। বেসিক সার্জিক্যাল সব অংশের সাথেএক্সট্রা স্পেশাল ফিনিশকোর্স প্রস্তুতি।",
+    "courseOutline": [
+      "Clinical Lecture - বেসিক ক্লিনিক্যাল টপিকস কভার",
+      "Clinical Exam & Solve - প্র্যাকটিক্যাল পরীক্ষার প্রস্তুতি",
+      "Tips & Tricks - পরীক্ষার টেকনিক ও কৌশল",
+      "Pre Mock Test - প্রাক-মক পরীক্ষা",
+      "Final Mock Test - ফাইনাল মক টেস্ট"
+    ],
+    "fee": "৳30,000",
+    "totalSeats": 50,
+    "enrolledStudents": 35,
+    "features": [
+      "Live Interactive Classes",
+      "Recording Available",
+      "Study Materials Provided",
+      "Weekly Tests",
+      "Certificate on Completion"
+    ]
+  },
+  {
+    "id": 2,
+    "title": "Offline P-1 Medicine Friday Best Care Exam Batch May-2026",
+    "type": "Offline",
+    "batch": "Friday Best Care Batch",
+    "session": "July-26 P-1 Candidate",
+    "branch": "Offline",
+    "startDate": "09-Jan-26",
+    "duration": "3:00PM",
+    "status": "OPEN",
+    "tag": "P01",
+    "color": "from-purple-400 to-pink-400",
+    "instructor": "DR. K",
+    "description": "অফলাইন ক্লাসরুম বেসড মেডিসিন প্রস্তুতি যেখানে সরাসরি শিক্ষকের সাথে যোগাযোগ করা যায়। প্র্যাক্টিক্যাল পরীক্ষার জন্য হাতে-কলমে শেখার সুযোগ।",
+    "courseOutline": [
+      "Face to Face Classes - সরাসরি ক্লাসরুম টিচিং",
+      "Clinical Practice Sessions - ক্লিনিক্যাল প্র্যাক্টিস",
+      "Mock Exams - মক পরীক্ষা প্রস্তুতি"
+    ],
+    "fee": "৳35,000",
+    "totalSeats": 30,
+    "enrolledStudents": 22,
+    "features": [
+      "Physical Classroom",
+      "Direct Teacher Interaction",
+      "Study Materials",
+      "Mock Tests"
+    ]
+  },
+  {
+    "id": 3,
+    "title": "Online P-1 Medicine Recovery Live Batch July-2026",
+    "type": "Online",
+    "batch": "Recovery Batch",
+    "session": "July-26 P-1 Candidate",
+    "branch": "Online",
+    "startDate": "08-Jan-26",
+    "duration": "2:00PM",
+    "status": "OPEN",
+    "tag": "Recovery",
+    "color": "from-orange-400 to-red-400",
+    "instructor": "MON, TUE",
+    "description": "যারা আগের ব্যাচে পাস করতে পারেননি তাদের জন্য বিশেষ রিকভারি ব্যাচ। দুর্বল টপিকগুলোতে বিশেষ জোর দেওয়া হয়।",
+    "courseOutline": [
+      "Weak Topics Focus - দুর্বল টপিকে বিশেষ মনোযোগ",
+      "Intensive Practice - নিবিড় অনুশীলন",
+      "Regular Assessment - নিয়মিত মূল্যায়ন"
+    ],
+    "fee": "৳25,000",
+    "totalSeats": 40,
+    "enrolledStudents": 28,
+    "features": [
+      "Focused Learning",
+      "Extra Practice Sessions",
+      "Personal Mentoring"
+    ]
+  },
+  {
+    "id": 4,
+    "title": "Offline P-1 Medicine Recovery Batch July-2026",
+    "type": "Offline",
+    "batch": "Recovery Batch",
+    "session": "Jan-26 P-1 Candidate",
+    "branch": "Offline",
+    "startDate": "08-Jan-26",
+    "duration": "2:00PM",
+    "status": "OPEN",
+    "tag": "Recovery",
+    "color": "from-yellow-400 to-orange-400",
+    "instructor": "MON, TUE",
+    "description": "অফলাইন রিকভারি ব্যাচ যেখানে সরাসরি শিক্ষকের সাথে দুর্বল পয়েন্টগুলো নিয়ে কাজ করা যায়।",
+    "courseOutline": [
+      "One-on-One Sessions - ব্যক্তিগত সেশন",
+      "Doubt Clearing - সন্দেহ দূরীকরণ",
+      "Mock Tests - নিয়মিত মক টেস্ট"
+    ],
+    "fee": "৳28,000",
+    "totalSeats": 25,
+    "enrolledStudents": 18,
+    "features": [
+      "Personal Attention",
+      "Small Batch Size",
+      "Flexible Timings"
+    ]
+  },
+  {
+    "id": 5,
+    "title": "Online Premium Recorded P-1 Davidson Plus Batch Jan-2026",
+    "type": "Online",
+    "batch": "Davidson Plus Batch",
+    "session": "Jan-26 P-1 Candidate",
+    "branch": "Online",
+    "startDate": "28-Dec-25",
+    "duration": "2:00PM",
+    "status": "OPEN",
+    "tag": "Premium",
+    "color": "from-red-400 to-orange-400",
+    "instructor": "MON & WED",
+    "description": "প্রিমিয়াম রেকর্ডেড ক্লাস যেখানে নিজের সুবিধামত সময়ে পড়া যায়। ডেভিডসন মেডিসিনের সম্পূর্ণ কভারেজ।",
+    "courseOutline": [
+      "HD Recorded Lectures - উচ্চমানের রেকর্ডেড লেকচার",
+      "Study Materials - পূর্ণাঙ্গ স্টাডি ম্যাটেরিয়াল",
+      "Online Tests - অনলাইন পরীক্ষা"
+    ],
+    "fee": "৳20,000",
+    "totalSeats": 100,
+    "enrolledStudents": 75,
+    "features": [
+      "Lifetime Access",
+      "Download Option",
+      "Mobile App Access"
+    ]
+  },
+  {
+    "id": 6,
+    "title": "Online P-1 Davidson Plus Live Batch-3 July-2026",
+    "type": "Online",
+    "batch": "Davidson Plus Batch",
+    "session": "July-26 P-1 Candidate",
+    "branch": "Online",
+    "startDate": "27-Dec-25",
+    "duration": "2:00PM",
+    "status": "OPEN",
+    "tag": "Live",
+    "color": "from-green-400 to-teal-400",
+    "instructor": "SAT & TUE",
+    "description": "লাইভ ইন্টারঅ্যাক্টিভ ডেভিডসন প্লাস ক্লাস যেখানে সরাসরি প্রশ্ন করা যায়।",
+    "courseOutline": [
+      "Live Interactive Sessions - লাইভ ইন্টারঅ্যাক্টিভ ক্লাস",
+      "Q&A Sessions - প্রশ্নোত্তর পর্ব",
+      "Weekly Assignments - সাপ্তাহিক অ্যাসাইনমেন্ট"
+    ],
+    "fee": "৳32,000",
+    "totalSeats": 60,
+    "enrolledStudents": 45,
+    "features": [
+      "Live Classes",
+      "Recording Available",
+      "Certificate Included"
+    ]
+  },
+  {
+    "id": 7,
+    "title": "Offline Davidson Plus Batch Jan-2026",
+    "type": "Offline",
+    "batch": "Davidson Plus Batch",
+    "session": "Jan-26 P-1 Candidate",
+    "branch": "Offline",
+    "startDate": "21-Jan-26",
+    "duration": "2:00PM",
+    "status": "ADMISSION OPEN",
+    "tag": "Offline",
+    "color": "from-blue-500 to-indigo-500",
+    "instructor": "Wednesday",
+    "description": "অফলাইন ডেভিডসন প্লাস ব্যাচ - সম্পূর্ণ মেডিসিন কভারেজ সহ ক্লাসরুম টিচিং।",
+    "courseOutline": [
+      "Classroom Teaching - ক্লাসরুম শিক্ষণ",
+      "Practical Sessions - প্র্যাক্টিক্যাল সেশন",
+      "Group Discussions - গ্রুপ আলোচনা"
+    ],
+    "fee": "৳38,000",
+    "totalSeats": 35,
+    "enrolledStudents": 30,
+    "features": [
+      "Physical Classes",
+      "Study Room Access",
+      "Library Facilities"
+    ]
+  },
+  {
+    "id": 8,
+    "title": "Offline FCPS P-1 Medicine Exam Batch Jan-2026",
+    "type": "Offline",
+    "batch": "Exam Batch",
+    "session": "Jan-26 P-1 Candidate",
+    "branch": "Offline",
+    "startDate": "20-Dec-25",
+    "duration": "3:00PM",
+    "status": "Add On OPEN",
+    "tag": "Exam",
+    "color": "from-indigo-500 to-purple-500",
+    "instructor": "Complete Course",
+    "description": "সম্পূর্ণ FCPS পার্ট-১ পরীক্ষার প্রস্তুতির জন্য বিশেষ ব্যাচ। পরীক্ষা-কেন্দ্রিক শিক্ষণ পদ্ধতি।",
+    "courseOutline": [
+      "Complete Syllabus - সম্পূর্ণ সিলেবাস কভার",
+      "Exam Strategies - পরীক্ষার কৌশল",
+      "Final Preparation - চূড়ান্ত প্রস্তুতি"
+    ],
+    "fee": "৳40,000",
+    "totalSeats": 40,
+    "enrolledStudents": 35,
+    "features": [
+      "Complete Course",
+      "All Study Materials",
+      "Exam Tips & Tricks"
+    ]
+  },
+  {
+    "id": 9,
+    "title": "Online FCPS P-1 Medicine Exam Batch Jan-2026",
+    "type": "Online",
+    "batch": "Exam Batch",
+    "session": "Jan-26 P-1 Candidate",
+    "branch": "Online",
+    "startDate": "18-Dec-25",
+    "duration": "3:00PM",
+    "status": "Add On OPEN",
+    "tag": "Exam",
+    "color": "from-purple-600 to-blue-600",
+    "instructor": "Complete Course",
+    "description": "অনলাইন FCPS পার্ট-১ সম্পূর্ণ পরীক্ষার প্রস্তুতি। যেকোনো জায়গা থেকে পড়া যায়।",
+    "courseOutline": [
+      "Online Live Classes - অনলাইন লাইভ ক্লাস",
+      "Digital Study Materials - ডিজিটাল স্টাডি ম্যাটেরিয়াল",
+      "Online Mock Exams - অনলাইন মক পরীক্ষা"
+    ],
+    "fee": "৳35,000",
+    "totalSeats": 80,
+    "enrolledStudents": 60,
+    "features": [
+      "Online Platform",
+      "24/7 Access",
+      "Mobile Friendly"
+    ]
+  }
+]
