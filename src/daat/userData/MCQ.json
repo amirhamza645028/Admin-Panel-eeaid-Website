@@ -1,0 +1,227 @@
+[
+  {
+    "id": 1,
+    "chapter": "Chapter 1 - Basics",
+    "question": "Which type of muscle tissue is found in the heart?",
+    "questionBangla": "হৃদপিণ্ডে কোন ধরনের পেশী টিস্যু পাওয়া যায়?",
+    "options": [
+      { "id": "A", "text": "Smooth", "textBangla": "মসৃণ" },
+      { "id": "B", "text": "Skeletal", "textBangla": "কঙ্কাল" },
+      { "id": "C", "text": "Cardiac", "textBangla": "হৃদ্‌পেশী" },
+      { "id": "D", "text": "Voluntary", "textBangla": "ঐচ্ছিক" }
+    ],
+    "correctAnswer": "C",
+    "explanation": "Cardiac muscle is found exclusively in the heart. It is involuntary, striated, and has intercalated discs that allow synchronized contractions.",
+    "explanationBangla": "হৃদ্‌পেশী শুধুমাত্র হৃদপিণ্ডে পাওয়া যায়। এটি অনৈচ্ছিক, রেখাযুক্ত এবং সমন্বিত সংকোচনের জন্য ইন্টারক্যালেটেড ডিস্ক রয়েছে।"
+  },
+  {
+    "id": 2,
+    "chapter": "Chapter 1 - Basics",
+    "question": "What is the normal resting heart rate for adults?",
+    "questionBangla": "প্রাপ্তবয়স্কদের স্বাভাবিক বিশ্রামকালীন হৃদস্পন্দন কত?",
+    "options": [
+      { "id": "A", "text": "40-60 beats/min", "textBangla": "৪০-৬০ বার/মিনিট" },
+      { "id": "B", "text": "60-100 beats/min", "textBangla": "৬০-১০০ বার/মিনিট" },
+      { "id": "C", "text": "100-120 beats/min", "textBangla": "১০০-১২০ বার/মিনিট" },
+      { "id": "D", "text": "120-140 beats/min", "textBangla": "১২০-১৪০ বার/মিনিট" }
+    ],
+    "correctAnswer": "B",
+    "explanation": "The normal resting heart rate for adults ranges from 60 to 100 beats per minute. Athletes may have lower rates due to better cardiovascular efficiency.",
+    "explanationBangla": "প্রাপ্তবয়স্কদের জন্য স্বাভাবিক বিশ্রামকালীন হৃদস্পন্দন প্রতি মিনিটে ৬০ থেকে ১০০ বার। ক্রীড়াবিদদের আরও কম হতে পারে।"
+  },
+  {
+    "id": 3,
+    "chapter": "Chapter 1 - Basics",
+    "question": "The sinoatrial (SA) node is located in which chamber?",
+    "questionBangla": "সাইনোঅ্যাট্রিয়াল (SA) নোড কোন প্রকোষ্ঠে অবস্থিত?",
+    "options": [
+      { "id": "A", "text": "Right atrium", "textBangla": "ডান অলিন্দ" },
+      { "id": "B", "text": "Left atrium", "textBangla": "বাম অলিন্দ" },
+      { "id": "C", "text": "Right ventricle", "textBangla": "ডান নিলয়" },
+      { "id": "D", "text": "Left ventricle", "textBangla": "বাম নিলয়" }
+    ],
+    "correctAnswer": "A",
+    "explanation": "The SA node, the heart's natural pacemaker, is located in the upper wall of the right atrium. It initiates the electrical impulses that regulate heartbeat.",
+    "explanationBangla": "SA নোড, হৃদপিণ্ডের প্রাকৃতিক পেসমেকার, ডান অলিন্দের উপরের দেয়ালে অবস্থিত।"
+  },
+  {
+    "id": 4,
+    "chapter": "Chapter 2 - Advanced",
+    "question": "Which valve prevents backflow from the aorta to the left ventricle?",
+    "questionBangla": "কোন ভাল্ব মহাধমনী থেকে বাম নিলয়ে রক্তের বিপরীত প্রবাহ প্রতিরোধ করে?",
+    "options": [
+      { "id": "A", "text": "Mitral valve", "textBangla": "মিট্রাল ভাল্ব" },
+      { "id": "B", "text": "Tricuspid valve", "textBangla": "ট্রাইকাসপিড ভাল্ব" },
+      { "id": "C", "text": "Aortic valve", "textBangla": "মহাধমনী ভাল্ব" },
+      { "id": "D", "text": "Pulmonary valve", "textBangla": "ফুসফুসীয় ভাল্ব" }
+    ],
+    "correctAnswer": "C",
+    "explanation": "The aortic valve is a semilunar valve located between the left ventricle and the aorta. It prevents blood from flowing back into the ventricle during diastole.",
+    "explanationBangla": "মহাধমনী ভাল্ব বাম নিলয় এবং মহাধমনীর মধ্যে অবস্থিত এবং ডায়াস্টোলের সময় রক্তের বিপরীত প্রবাহ রোধ করে।"
+  },
+  {
+    "id": 5,
+    "chapter": "Chapter 2 - Advanced",
+    "question": "What is the function of coronary arteries?",
+    "questionBangla": "করোনারি ধমনীর কাজ কী?",
+    "options": [
+      { "id": "A", "text": "Supply blood to the brain", "textBangla": "মস্তিষ্কে রক্ত সরবরাহ করা" },
+      { "id": "B", "text": "Supply blood to the lungs", "textBangla": "ফুসফুসে রক্ত সরবরাহ করা" },
+      { "id": "C", "text": "Supply blood to the heart muscle", "textBangla": "হৃদপেশীতে রক্ত সরবরাহ করা" },
+      { "id": "D", "text": "Supply blood to the kidneys", "textBangla": "বৃক্কে রক্ত সরবরাহ করা" }
+    ],
+    "correctAnswer": "C",
+    "explanation": "Coronary arteries supply oxygenated blood to the heart muscle (myocardium). Blockage of these arteries can lead to myocardial infarction (heart attack).",
+    "explanationBangla": "করোনারি ধমনী হৃদপেশীতে অক্সিজেনযুক্ত রক্ত সরবরাহ করে। এই ধমনী বন্ধ হলে হার্ট অ্যাটাক হতে পারে।"
+  },
+  {
+    "id": 6,
+    "chapter": "Chapter 2 - Advanced",
+    "question": "The pericardium is:",
+    "questionBangla": "পেরিকার্ডিয়াম হলো:",
+    "options": [
+      { "id": "A", "text": "The heart muscle", "textBangla": "হৃদপেশী" },
+      { "id": "B", "text": "The outer membrane covering the heart", "textBangla": "হৃদপিণ্ড ঢেকে রাখা বাইরের আবরণ" },
+      { "id": "C", "text": "A heart valve", "textBangla": "হৃদপিণ্ডের ভাল্ব" },
+      { "id": "D", "text": "A blood vessel", "textBangla": "রক্তনালী" }
+    ],
+    "correctAnswer": "B",
+    "explanation": "The pericardium is a double-walled sac that surrounds and protects the heart. It contains a small amount of fluid that reduces friction during heartbeats.",
+    "explanationBangla": "পেরিকার্ডিয়াম হলো দ্বিস্তরীয় থলি যা হৃদপিণ্ডকে ঘিরে রাখে এবং রক্ষা করে।"
+  },
+  {
+    "id": 7,
+    "chapter": "Chapter 3 - Clinical",
+    "question": "Hypertension is defined as blood pressure consistently above:",
+    "questionBangla": "উচ্চ রক্তচাপ বলতে বোঝায় রক্তচাপ ক্রমাগত এর উপরে:",
+    "options": [
+      { "id": "A", "text": "120/80 mmHg", "textBangla": "১২০/৮০ mmHg" },
+      { "id": "B", "text": "130/85 mmHg", "textBangla": "১৩০/৮৫ mmHg" },
+      { "id": "C", "text": "140/90 mmHg", "textBangla": "১৪০/৯০ mmHg" },
+      { "id": "D", "text": "150/95 mmHg", "textBangla": "১৫০/৯৫ mmHg" }
+    ],
+    "correctAnswer": "C",
+    "explanation": "Hypertension is generally defined as blood pressure consistently at or above 140/90 mmHg. This can lead to serious health complications if left untreated.",
+    "explanationBangla": "উচ্চ রক্তচাপ সাধারণত ১৪০/৯০ mmHg বা তার উপরে রক্তচাপ বোঝায়। চিকিৎসা না করলে গুরুতর স্বাস্থ্য জটিলতা হতে পারে।"
+  },
+  {
+    "id": 8,
+    "chapter": "Chapter 3 - Clinical",
+    "question": "ECG stands for:",
+    "questionBangla": "ECG এর পূর্ণরূপ:",
+    "options": [
+      { "id": "A", "text": "Electrocardiogram", "textBangla": "ইলেক্ট্রোকার্ডিওগ্রাম" },
+      { "id": "B", "text": "Electrocardiac Graph", "textBangla": "ইলেক্ট্রোকার্ডিয়াক গ্রাফ" },
+      { "id": "C", "text": "Electronic Cardiac Gauge", "textBangla": "ইলেকট্রনিক কার্ডিয়াক গেজ" },
+      { "id": "D", "text": "Electrocardiographic", "textBangla": "ইলেক্ট্রোকার্ডিওগ্রাফিক" }
+    ],
+    "correctAnswer": "A",
+    "explanation": "ECG (Electrocardiogram) is a test that measures the electrical activity of the heart. It helps diagnose various heart conditions.",
+    "explanationBangla": "ECG (ইলেক্ট্রোকার্ডিওগ্রাম) হলো একটি পরীক্ষা যা হৃদপিণ্ডের বৈদ্যুতিক কার্যকলাপ পরিমাপ করে।"
+  },
+  {
+    "id": 9,
+    "chapter": "Chapter 3 - Clinical",
+    "question": "Atherosclerosis primarily affects:",
+    "questionBangla": "এথেরোস্ক্লেরোসিস প্রধানত প্রভাবিত করে:",
+    "options": [
+      { "id": "A", "text": "Veins", "textBangla": "শিরা" },
+      { "id": "B", "text": "Arteries", "textBangla": "ধমনী" },
+      { "id": "C", "text": "Capillaries", "textBangla": "কৈশিক নালী" },
+      { "id": "D", "text": "Lymphatic vessels", "textBangla": "লসিকা নালী" }
+    ],
+    "correctAnswer": "B",
+    "explanation": "Atherosclerosis is a condition where plaque builds up inside arteries, causing them to narrow and harden. This can lead to heart attacks and strokes.",
+    "explanationBangla": "এথেরোস্ক্লেরোসিস হলো এমন একটি অবস্থা যেখানে ধমনীর ভিতরে প্লাক জমা হয়, যার ফলে ধমনী সংকুচিত এবং শক্ত হয়ে যায়।"
+  },
+  {
+    "id": 10,
+    "chapter": "Chapter 4 - Physiology",
+    "question": "During systole, the ventricles:",
+    "questionBangla": "সিস্টোলের সময়, নিলয়গুলি:",
+    "options": [
+      { "id": "A", "text": "Relax", "textBangla": "শিথিল হয়" },
+      { "id": "B", "text": "Contract", "textBangla": "সংকুচিত হয়" },
+      { "id": "C", "text": "Fill with blood", "textBangla": "রক্তে পূর্ণ হয়" },
+      { "id": "D", "text": "Remain static", "textBangla": "স্থির থাকে" }
+    ],
+    "correctAnswer": "B",
+    "explanation": "During systole, the ventricles contract to pump blood out of the heart - the left ventricle to the aorta and the right ventricle to the pulmonary artery.",
+    "explanationBangla": "সিস্টোলের সময়, নিলয়গুলি সংকুচিত হয়ে হৃদপিণ্ড থেকে রক্ত বের করে দেয়।"
+  },
+  {
+    "id": 11,
+    "chapter": "Chapter 4 - Physiology",
+    "question": "The 'lub-dub' sound of the heartbeat is caused by:",
+    "questionBangla": "হৃদস্পন্দনের 'লাব-ডাব' শব্দ সৃষ্টি হয়:",
+    "options": [
+      { "id": "A", "text": "Blood flowing through chambers", "textBangla": "প্রকোষ্ঠের মধ্য দিয়ে রক্ত প্রবাহ" },
+      { "id": "B", "text": "Closing of heart valves", "textBangla": "হৃদপিণ্ডের ভাল্ব বন্ধ হওয়া" },
+      { "id": "C", "text": "Muscle contraction", "textBangla": "পেশী সংকোচন" },
+      { "id": "D", "text": "Electrical impulses", "textBangla": "বৈদ্যুতিক আবেগ" }
+    ],
+    "correctAnswer": "B",
+    "explanation": "The 'lub' sound is from the closing of the AV valves (tricuspid and mitral), and the 'dub' is from the closing of the semilunar valves (aortic and pulmonary).",
+    "explanationBangla": "'লাব' শব্দ AV ভাল্ব বন্ধ হওয়ার সময় এবং 'ডাব' শব্দ সেমিলুনার ভাল্ব বন্ধ হওয়ার সময় সৃষ্টি হয়।"
+  },
+  {
+    "id": 12,
+    "chapter": "Chapter 4 - Physiology",
+    "question": "Stroke volume is defined as:",
+    "questionBangla": "স্ট্রোক ভলিউম বলতে বোঝায়:",
+    "options": [
+      { "id": "A", "text": "Total blood in the body", "textBangla": "শরীরের মোট রক্ত" },
+      { "id": "B", "text": "Blood pumped per heartbeat", "textBangla": "প্রতি হৃদস্পন্দনে পাম্প করা রক্ত" },
+      { "id": "C", "text": "Blood in the left ventricle", "textBangla": "বাম নিলয়ের রক্ত" },
+      { "id": "D", "text": "Blood pumped per minute", "textBangla": "প্রতি মিনিটে পাম্প করা রক্ত" }
+    ],
+    "correctAnswer": "B",
+    "explanation": "Stroke volume is the amount of blood pumped by the left ventricle with each heartbeat. Normal stroke volume is around 70 mL per beat.",
+    "explanationBangla": "স্ট্রোক ভলিউম হলো প্রতিটি হৃদস্পন্দনে বাম নিলয় দ্বারা পাম্প করা রক্তের পরিমাণ।"
+  },
+  {
+    "id": 13,
+    "chapter": "Chapter 5 - Pathology",
+    "question": "Myocardial infarction refers to:",
+    "questionBangla": "মায়োকার্ডিয়াল ইনফার্কশন বলতে বোঝায়:",
+    "options": [
+      { "id": "A", "text": "Heart valve disease", "textBangla": "হৃদপিণ্ডের ভাল্ব রোগ" },
+      { "id": "B", "text": "Heart attack", "textBangla": "হার্ট অ্যাটাক" },
+      { "id": "C", "text": "Irregular heartbeat", "textBangla": "অনিয়মিত হৃদস্পন্দন" },
+      { "id": "D", "text": "Heart inflammation", "textBangla": "হৃদপিণ্ডের প্রদাহ" }
+    ],
+    "correctAnswer": "B",
+    "explanation": "Myocardial infarction (MI), commonly known as a heart attack, occurs when blood flow to part of the heart is blocked, causing heart muscle damage.",
+    "explanationBangla": "মায়োকার্ডিয়াল ইনফার্কশন (MI), সাধারণত হার্ট অ্যাটাক নামে পরিচিত, যখন হৃদপিণ্ডের একটি অংশে রক্ত প্রবাহ বন্ধ হয়ে যায়।"
+  },
+  {
+    "id": 14,
+    "chapter": "Chapter 5 - Pathology",
+    "question": "Angina pectoris is characterized by:",
+    "questionBangla": "এনজাইনা পেক্টোরিস এর বৈশিষ্ট্য:",
+    "options": [
+      { "id": "A", "text": "Chest pain due to reduced blood flow", "textBangla": "রক্ত প্রবাহ কমার কারণে বুকে ব্যথা" },
+      { "id": "B", "text": "Rapid heartbeat", "textBangla": "দ্রুত হৃদস্পন্দন" },
+      { "id": "C", "text": "Fluid in the lungs", "textBangla": "ফুসফুসে তরল" },
+      { "id": "D", "text": "High blood pressure", "textBangla": "উচ্চ রক্তচাপ" }
+    ],
+    "correctAnswer": "A",
+    "explanation": "Angina pectoris is chest pain or discomfort caused by reduced blood flow to the heart muscle. It's often a warning sign of coronary artery disease.",
+    "explanationBangla": "এনজাইনা পেক্টোরিস হলো হৃদপেশীতে রক্ত প্রবাহ কমে যাওয়ার কারণে বুকে ব্যথা বা অস্বস্তি।"
+  },
+  {
+    "id": 15,
+    "chapter": "Chapter 5 - Pathology",
+    "question": "Atrial fibrillation is a type of:",
+    "questionBangla": "অ্যাট্রিয়াল ফিব্রিলেশন হলো এক ধরনের:",
+    "options": [
+      { "id": "A", "text": "Heart valve disorder", "textBangla": "হৃদপিণ্ডের ভাল্ব ব্যাধি" },
+      { "id": "B", "text": "Arrhythmia (irregular heartbeat)", "textBangla": "অ্যারিথমিয়া (অনিয়মিত হৃদস্পন্দন)" },
+      { "id": "C", "text": "Congenital heart defect", "textBangla": "জন্মগত হৃদপিণ্ড ত্রুটি" },
+      { "id": "D", "text": "Blood clot", "textBangla": "রক্ত জমাট" }
+    ],
+    "correctAnswer": "B",
+    "explanation": "Atrial fibrillation (AFib) is an irregular and often rapid heart rhythm that can lead to blood clots, stroke, and heart failure if not treated.",
+    "explanationBangla": "অ্যাট্রিয়াল ফিব্রিলেশন (AFib) হলো একটি অনিয়মিত এবং প্রায়শই দ্রুত হৃদস্পন্দন যা চিকিৎসা না করলে রক্ত জমাট, স্ট্রোক হতে পারে।"
+  }
+]
