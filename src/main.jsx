@@ -129,10 +129,7 @@ const router = createBrowserRouter([
     path:'/student-home',
     element:<Home></Home>
   },
-  {
-    path:'/user-suport',
-    element:<MySuport></MySuport>
-  }
+  
 ])
 
 ReactDOM.createRoot(document.getElementById('root')).render(

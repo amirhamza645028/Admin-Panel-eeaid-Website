@@ -1,0 +1,94 @@
+{
+  "user": {
+    "name": "Dr. Ayesha Rahman",
+    "progress": 30,
+    "completedLessons": 12,
+    "nextLesson": "Chapter 5: Medical Ethics",
+    "avatar": "/images/avatar.jpg"
+  },
+  "sections": [
+    {
+      "id": 1,
+      "title": "Ethics Questions (MCQ)",
+      "description": "Chapter-based multiple-choice questions",
+      "icon": "📚",
+      "totalItems": 120,
+      "category": "MCQ",
+      "link": "/ethics-mcq",
+      "color": "from-blue-500 to-blue-600"
+    },
+    {
+      "id": 2,
+      "title": "Essay Questions",
+      "description": "Important creative and essay questions",
+      "icon": "✍️",
+      "totalItems": 15,
+      "category": "Written Questions",
+      "link": "/essay-questions",
+      "color": "from-green-500 to-green-600"
+    },
+    {
+      "id": 3,
+      "title": "Lecture Videos",
+      "description": "Past board questions and important suggestions",
+      "icon": "🎥",
+      "totalItems": 30,
+      "category": "Video-Lessons",
+      "link": "/lecture-videos",
+      "color": "from-purple-500 to-purple-600"
+    },
+    {
+      "id": 4,
+      "title": "Model Tests",
+      "description": "Assess your preparation with model tests",
+      "icon": "📝",
+      "totalItems": 20,
+      "category": "Widel Lessons",
+      "link": "/model-tests",
+      "color": "from-orange-500 to-orange-600"
+    },
+    {
+      "id": 5,
+      "title": "Advice Board",
+      "description": "Study tips and teacher's advice",
+      "icon": "💡",
+      "totalItems": 10,
+      "category": "Phdel Lecture 3",
+      "link": "/advice-board",
+      "color": "from-red-500 to-red-600"
+    },
+    {
+      "id": 6,
+      "title": "Study Materials",
+      "description": "Downloadable PDFs and resources",
+      "icon": "📁",
+      "totalItems": 25,
+      "category": "Resources",
+      "link": "/study-materials",
+      "color": "from-teal-500 to-teal-600"
+    }
+  ],
+  "stats": {
+    "totalStudents": 1250,
+    "activeUsers": 845,
+    "completionRate": "78%",
+    "avgScore": "85%"
+  },
+  "quickLinks": [
+    {
+      "title": "Upcoming Live Class",
+      "time": "Tomorrow, 3:00 PM",
+      "topic": "Ethics in Clinical Practice"
+    },
+    {
+      "title": "Assignment Due",
+      "time": "2 days left",
+      "topic": "Chapter 4 Essay Submission"
+    },
+    {
+      "title": "Mock Test",
+      "time": "Weekly",
+      "topic": "Test your preparation"
+    }
+  ]
+}
