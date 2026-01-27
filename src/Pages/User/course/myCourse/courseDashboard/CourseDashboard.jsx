@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import CourseDashboard from '../../../../../daat/userData/CourseDashboard.json'
+import CourseDashboards from '../../../../../daat/userData/CourseDashboard.json'
 import { 
   FiBook, 
   FiEdit, 
@@ -18,7 +18,7 @@ import {
 import { motion } from 'framer-motion';
 
 function CourseDashboard() {
-  const [dashboardData, setDashboardData] = useState(CourseDashboard);
+  const [dashboardData, setDashboardData] = useState(CourseDashboards);
   const [loading, setLoading] = useState(false);
 
   const iconComponents = {
@@ -45,9 +45,9 @@ function CourseDashboard() {
     <div className="min-h-screen bg-gradient-to-br from-slate-50 via-white to-slate-100 p-4 md:p-6">
       {/* Header Section */}
       <div className="max-w-7xl mx-auto">
-        <div className="mb-8">
-          <h1 className="text-3xl md:text-4xl font-bold bg-gradient-to-r from-white via-[#2F6FDB] to-[#F5A623] bg-clip-text text-transparent mb-2">
-            Welcome back, <span>{dashboardData.user.name}</span>
+        <div className="mb-8 text-center">
+          <h1 className="text-3xl  md:text-4xl font-bold bg-gradient-to-r from-white via-[#2F6FDB] to-[#F5A623] bg-clip-text text-transparent mb-2">
+            Your Course Dashboard, <span>{dashboardData.user.name}</span>
           </h1>
           <p className="text-gray-600">Track your progress and access learning resources</p>
         </div>
@@ -274,4 +274,5 @@ function CourseDashboard() {
     </div>
   );
 }
-export default CourseDashboard;
+
+export default CourseDashboard

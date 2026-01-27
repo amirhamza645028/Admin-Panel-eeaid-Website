@@ -4,6 +4,7 @@ import AdminLayout from '../../Layout/AdminLayout'
 import NavBar from '../../Layout/NavBar'
 import UserDashboard from '../../Pages/User/profile/UserDashboard'
 import MySuport from '../../Pages/User/suport/MySuport'
+import CourseDashboard from '../../Pages/User/course/myCourse/courseDashboard/CourseDashboard'
 
 function Home() {
   return (
@@ -12,6 +13,7 @@ function Home() {
           <NavBar></NavBar>
           <UserDashboard></UserDashboard>
           <MySuport></MySuport>
+          <CourseDashboard></CourseDashboard>
 
     </div>
   
