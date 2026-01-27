@@ -2,7 +2,6 @@ import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import { FiCalendar, FiClock, FiUsers, FiMapPin, FiTag } from 'react-icons/fi';
 import GpImg from '../../../../assets/GpCourse.jpg'
-
 function CourseBatchSingleCard({course}) {
   const navigate = useNavigate();
 

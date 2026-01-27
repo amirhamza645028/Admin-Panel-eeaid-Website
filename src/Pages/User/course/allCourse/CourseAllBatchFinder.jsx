@@ -1,8 +1,10 @@
 
 import React, { useState, useMemo } from 'react';
 import { FiSearch } from 'react-icons/fi';
-import CourseCard from './CourseBatchSingleCard';
-import UserDisplayAllCourse from '../../../../daat/userData/UserDisplayAllCourse.json';
+// import CourseCard from './CourseBatchSingleCard';
+import coursesData from '../../../../daat/userData/UserDisplayAllCourse.json';
+import CourseBatchSingleCard from './CourseBatchSingleCard';
+import MCQ from '../myCourse/MCQ/MCQ';
 
 const filterOptions = {
   batchType: [
@@ -48,7 +50,7 @@ function CourseAllBatchFinder() {
   };
 
   const filteredCourses = useMemo(() => {
-    return UserDisplayAllCourse.filter(course => {
+    return coursesData.filter(course => {
       // Search filter
       const matchesSearch = course.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
                           course.batch.toLowerCase().includes(searchQuery.toLowerCase()) ||
@@ -214,7 +216,9 @@ function CourseAllBatchFinder() {
             {filteredCourses.length > 0 ? (
               <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6">
                 {filteredCourses.map(course => (
-                  <CourseCard key={course.id} course={course} />
+                  // <CourseCard key={course.id} course={course} />
+                  <CourseBatchSingleCard key={course.id} course={course}></CourseBatchSingleCard>
+                
                 ))}
               </div>
             ) : (

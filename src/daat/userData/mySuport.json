@@ -1,0 +1,155 @@
+{
+  "pageTitle": "GP Course 2024",
+  "pageSubtitle": "Support & Contact Center",
+  "tagline": "EXCLUSIVE EDUCATION AID",
+  "contact": {
+    "phoneHours": "10:00 AM - 11:30 PM",
+    "whatsappHours": "Anytime",
+    "numbers": [
+      "01942508207",
+      "01946804508",
+      "01521728665"
+    ]
+  },
+  "sections": [
+    {
+      "id": 1,
+      "title": "App Support",
+      "description": "Get help with our mobile application features and troubleshooting",
+      "icon": "📱",
+      "color": "from-blue-500 to-cyan-500",
+      "items": [
+        "App Installation Guide",
+        "Login & Account Issues",
+        "Video Playback Help",
+        "Download Problems",
+        "Payment Methods"
+      ],
+      "buttonText": "View Guides",
+      "link": "/app-support"
+    },
+    {
+      "id": 2,
+      "title": "Terms & Policies",
+      "description": "Read our terms of service, privacy policy, and refund policy",
+      "icon": "📄",
+      "color": "from-purple-500 to-pink-500",
+      "items": [
+        "Terms of Service",
+        "Privacy Policy",
+        "Refund Policy",
+        "Course Policies",
+        "User Agreement"
+      ],
+      "buttonText": "Read Policies",
+      "link": "/terms"
+    },
+    {
+      "id": 3,
+      "title": "Facebook Page",
+      "description": "Connect with us on Facebook for updates and community support",
+      "icon": "👍",
+      "color": "from-blue-600 to-blue-800",
+      "items": [
+        "Latest Updates",
+        "Live Sessions",
+        "Student Community",
+        "Q&A Sessions",
+        "Exam Tips"
+      ],
+      "buttonText": "Visit Page",
+      "link": "https://facebook.com/gpcourse"
+    },
+    {
+      "id": 4,
+      "title": "Website Help",
+      "description": "Find answers about website navigation and features",
+      "icon": "🌐",
+      "color": "from-green-500 to-emerald-500",
+      "items": [
+        "Course Navigation",
+        "Dashboard Guide",
+        "Payment Process",
+        "Certificate Download",
+        "Technical Support"
+      ],
+      "buttonText": "Get Help",
+      "link": "/website-help"
+    },
+    {
+      "id": 5,
+      "title": "Phone Support",
+      "description": "Call us during office hours for immediate assistance",
+      "icon": "📞",
+      "color": "from-orange-500 to-red-500",
+      "items": [
+        "Admission Queries",
+        "Payment Issues",
+        "Technical Support",
+        "Course Counseling",
+        "Emergency Support"
+      ],
+      "buttonText": "Call Now",
+      "link": "tel:01942508207"
+    },
+    {
+      "id": 6,
+      "title": "WhatsApp Support",
+      "description": "Message us anytime for quick responses to your queries",
+      "icon": "💬",
+      "color": "from-green-600 to-teal-500",
+      "items": [
+        "Instant Replies",
+        "File Sharing",
+        "Screen Sharing",
+        "Step-by-step Help",
+        "24/7 Support"
+      ],
+      "buttonText": "Message Now",
+      "link": "https://wa.me/8801942508207"
+    }
+  ],
+  "quickSupport": [
+    {
+      "id": 1,
+      "title": "Urgent Technical Issue",
+      "description": "Immediate assistance for technical problems",
+      "responseTime": "Within 15 minutes",
+      "icon": "⚡"
+    },
+    {
+      "id": 2,
+      "title": "Payment & Refund",
+      "description": "Help with payments and refund requests",
+      "responseTime": "Within 1 hour",
+      "icon": "💰"
+    },
+    {
+      "id": 3,
+      "title": "Course Content",
+      "description": "Questions about lessons and materials",
+      "responseTime": "Within 30 minutes",
+      "icon": "📚"
+    }
+  ],
+  "stats": {
+    "avgResponseTime": "25 minutes",
+    "satisfactionRate": "96%",
+    "totalResolved": "12,540+",
+    "activeSupport": "24/7"
+  },
+  "faq": [
+    {
+      "question": "How do I reset my password?",
+      "answer": "Go to login page → Click 'Forgot Password' → Enter your registered email → Check email for reset link"
+    },
+    {
+      "question": "Can I access courses offline?",
+      "answer": "Yes, you can download videos and materials for offline viewing in our mobile app"
+    },
+    {
+      "question": "What payment methods do you accept?",
+      "answer": "We accept bKash, Nagad, Rocket, Credit/Debit Cards, and Bank Transfers"
+    }
+  ]
+}

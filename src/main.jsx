@@ -26,6 +26,7 @@ import Home from './components/Home/Home';
 import TrueFalse from './Pages/User/examSection/TrueFalse/TrueFalse';
 import CourseBatchSingleCard from './Pages/User/course/allCourse/CourseBatchSingleCard';
 import MCQ from './Pages/User/course/myCourse/MCQ/MCQ';
+import MySuport from './Pages/User/suport/MySuport';
 
 const router = createBrowserRouter([
   {
@@ -116,6 +117,10 @@ const router = createBrowserRouter([
         {
           path:'/user-mcq',
           element:<MCQ></MCQ>
+        },
+        {
+          path:'/user-suport',
+          element:<MySuport></MySuport>
         }
        
       ]
@@ -123,6 +128,10 @@ const router = createBrowserRouter([
   {
     path:'/student-home',
     element:<Home></Home>
+  },
+  {
+    path:'/user-suport',
+    element:<MySuport></MySuport>
   }
 ])
 
