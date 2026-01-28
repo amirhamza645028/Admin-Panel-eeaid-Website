@@ -53,10 +53,10 @@ function CourseDashboard() {
         </div>
 
         {/* User Stats Card */}
-        <div className="bg-gradient-to-r from-[#2F6FDB] to-[#F5A623] rounded-2xl shadow-xl p-6 mb-8 text-white">
+        <div className="bg-gradient-to-r from-[#2F6FDB] to-[#F5A623] rounded-2xl shadow-xl p-2 mb-4 text-white">
           <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
             <div>
-              <div className="flex items-center gap-3 mb-2">
+              <div className="flex items-center gap-4 mb-2">
                 <div className="p-2 bg-white/20 rounded-lg backdrop-blur-sm">
                   <FiTrendingUp className="w-5 h-5" />
                 </div>
@@ -112,7 +112,7 @@ function CourseDashboard() {
         </div>
 
         {/* Quick Links */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-8">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-4">
           {dashboardData.quickLinks.map((link, index) => (
             <motion.div
               key={index}
@@ -137,7 +137,7 @@ function CourseDashboard() {
         </div>
 
         {/* Main Cards Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
           {dashboardData.sections.map((section, index) => {
             const IconComponent = iconComponents[section.icon] || FiBook;
             
@@ -150,7 +150,9 @@ function CourseDashboard() {
                 className="group relative cursor-pointer"
               >
                 {/* Hover Border Effect */}
-                <div className="absolute -inset-0.5 bg-gradient-to-r from-[#2F6FDB] to-[#F5A623] rounded-2xl opacity-0 group-hover:opacity-100 transition-all duration-500 blur"></div>
+                <div className="absolute -inset-0.5 bg-gradient-to-r from-[#2F6FDB] to-[#F5A623] rounded-2xl opacity-10 group-hover:opacity-100 transition-all duration-500 blur">
+
+                </div>
 
                 {/* Main Card */}
                 <div className="relative bg-white rounded-2xl shadow-lg overflow-hidden border border-gray-100 group-hover:border-transparent transition-all duration-500">
@@ -158,10 +160,10 @@ function CourseDashboard() {
                   <div className="h-2 bg-gradient-to-r from-[#2F6FDB] to-[#F5A623]"></div>
 
                   {/* Card Content */}
-                  <div className="p-6">
+                  <div className="p-2">
                     <div className="flex items-start justify-between mb-4">
                       <div className="flex items-center gap-4">
-                        <div className="p-3 rounded-xl bg-gradient-to-br from-[#2F6FDB] to-[#5E89C1] text-white shadow-lg">
+                        <div className="p-3 rounded-xl bg-gradient-to-br from-[#1366f6] to-[#348bfd] text-white shadow-lg">
                           <IconComponent className="w-6 h-6" />
                         </div>
                         <div>
@@ -173,20 +175,20 @@ function CourseDashboard() {
                       </div>
                     </div>
 
-                    <div className="flex items-center justify-between mt-6">
+                    <div className="flex items-center justify-between mt-3">
                       <div>
                         <p className="text-sm text-gray-500">{section.category}</p>
                         <p className="text-2xl font-bold text-gray-800 mt-1">{section.totalItems}</p>
                       </div>
                       
-                      <button className="flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-[#2F6FDB] to-[#5E89C1] hover:from-[#5E89C1] hover:to-[#F5A623] text-white rounded-lg font-medium transition-all duration-300 shadow-md hover:shadow-lg group-hover:translate-x-2">
+                      <button className="flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-[#055bef] to-[#026cf6] hover:from-[#5E89C1] hover:to-[#F5A623] text-white rounded-lg font-medium transition-all duration-300 shadow-md hover:shadow-lg group-hover:translate-x-2">
                         <span>Explore</span>
                         <FiArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
                       </button>
                     </div>
 
                     {/* Progress Indicator */}
-                    <div className="mt-6">
+                    <div className="mt-3">
                       <div className="flex justify-between text-sm text-gray-600 mb-1">
                         <span>Completion</span>
                         <span>{Math.min(section.totalItems, 100)}%</span>
@@ -211,9 +213,9 @@ function CourseDashboard() {
         </div>
 
         {/* Additional Stats */}
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-6 mt-8">
-          <div className="bg-white rounded-xl shadow-md p-6 hover:shadow-lg transition-all duration-300 border-2 border-transparent hover:border-[#2F6FDB]">
-            <div className="flex items-center gap-3">
+        <div className="grid grid-cols-1 md:grid-cols-4 gap-6 mt-6">
+          <div className="bg-white rounded-xl shadow-md p-2 hover:shadow-lg transition-all duration-300 border-2 border-transparent hover:border-[#2F6FDB]">
+            <div className="flex items-center gap-4">
               <div className="p-3 bg-gradient-to-br from-green-100 to-green-50 rounded-lg">
                 <FiTrendingUp className="w-6 h-6 text-green-600" />
               </div>
@@ -224,8 +226,8 @@ function CourseDashboard() {
             </div>
           </div>
 
-          <div className="bg-white rounded-xl shadow-md p-6 hover:shadow-lg transition-all duration-300 border-2 border-transparent hover:border-[#2F6FDB]">
-            <div className="flex items-center gap-3">
+          <div className="bg-white rounded-xl shadow-md p-2 hover:shadow-lg transition-all duration-300 border-2 border-transparent hover:border-[#2F6FDB]">
+            <div className="flex items-center gap-4">
               <div className="p-3 bg-gradient-to-br from-blue-100 to-blue-50 rounded-lg">
                 <FiUsers className="w-6 h-6 text-[#2F6FDB]" />
               </div>
@@ -236,8 +238,8 @@ function CourseDashboard() {
             </div>
           </div>
 
-          <div className="bg-white rounded-xl shadow-md p-6 hover:shadow-lg transition-all duration-300 border-2 border-transparent hover:border-[#2F6FDB]">
-            <div className="flex items-center gap-3">
+          <div className="bg-white rounded-xl shadow-md p-2 hover:shadow-lg transition-all duration-300 border-2 border-transparent hover:border-[#2F6FDB]">
+            <div className="flex items-center gap-4">
               <div className="p-3 bg-gradient-to-br from-purple-100 to-purple-50 rounded-lg">
                 <FiCheckCircle className="w-6 h-6 text-purple-600" />
               </div>
@@ -248,8 +250,8 @@ function CourseDashboard() {
             </div>
           </div>
 
-          <div className="bg-white rounded-xl shadow-md p-6 hover:shadow-lg transition-all duration-300 border-2 border-transparent hover:border-[#F5A623]">
-            <div className="flex items-center gap-3">
+          <div className="bg-white rounded-xl shadow-md p-2 hover:shadow-lg transition-all duration-300 border-2 border-transparent hover:border-[#F5A623]">
+            <div className="flex items-center gap-4">
               <div className="p-3 bg-gradient-to-br from-orange-100 to-orange-50 rounded-lg">
                 <FiAlertCircle className="w-6 h-6 text-[#F5A623]" />
               </div>

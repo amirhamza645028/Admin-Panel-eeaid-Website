@@ -6,6 +6,7 @@ import logo from '../../src/assets/favicon.ico';
 const NavBar = () => {
     const location = useLocation();
     const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+    const [isProfileDropdownOpen, setIsProfileDropdownOpen] = useState(false); // নতুন state
 
     const toggleMobileMenu = () => {
         setIsMobileMenuOpen(!isMobileMenuOpen);
@@ -13,6 +14,21 @@ const NavBar = () => {
 
     const closeMobileMenu = () => {
         setIsMobileMenuOpen(false);
+    };
+
+    const toggleProfileDropdown = () => {
+        setIsProfileDropdownOpen(!isProfileDropdownOpen);
+    };
+
+    const closeProfileDropdown = () => {
+        setIsProfileDropdownOpen(false);
+    };
+
+    const handleLogout = () => {
+        // Add your logout logic here
+        console.log("Logging out...");
+        closeMobileMenu();
+        closeProfileDropdown();
     };
 
     const navItems = [
@@ -65,22 +81,16 @@ const NavBar = () => {
 
     return (
         <>
-            <div className={`sticky top-0 z-50 transition-all duration-300 ${
-                'bg-white border-b border-slate-200'
-            }`}>
-                <div className=" px-4 lg:px-8">
+            <div className={`sticky top-0 z-50 transition-all duration-300 bg-white border-b border-slate-200`}>
+                <div className="px-4 lg:px-8">
                     <div className="flex items-center justify-between h-20">
                         
                         {/* Logo Section */}
                         <Link to="/user-dashboard" className="flex items-center gap-3 group">
-                            <div className={`w-11 h-11 flex items-center justify-center rounded-xl transition-all duration-300 ${
-                                'bg-slate-100 border border-slate-200 group-hover:border-cyan-500'
-                            }`}>
+                            <div className="w-11 h-11 flex items-center justify-center rounded-xl transition-all duration-300 bg-slate-100 border border-slate-200 group-hover:border-cyan-500">
                                 <img src={logo} alt="EducationAid" className="w-7" />
                             </div>
-                            <span className={`font-bold text-xl tracking-tight hidden sm:block ${
-                                'text-slate-900'
-                            }`}>
+                            <span className="font-bold text-xl tracking-tight hidden sm:block text-slate-900">
                                 Education<span className="text-cyan-400">Aid</span>
                             </span>
                         </Link>
@@ -93,7 +103,7 @@ const NavBar = () => {
                                         to={item.path} 
                                         className={`px-5 py-2 rounded-full border-2 transition-all duration-300 font-semibold text-sm relative ${
                                             location.pathname === item.path 
-                                                ? `${item.activeColor} ${item.glowColor} ${'bg-slate-50'}` 
+                                                ? `${item.activeColor} ${item.glowColor} bg-slate-50` 
                                                 : `border-slate-200 text-slate-600 hover:text-slate-900 hover:border-slate-300 ${item.hoverGlow}`
                                         }`}
                                     >
@@ -114,80 +124,69 @@ const NavBar = () => {
                         <div className="flex items-center gap-3">
                             {/* Notifications */}
                             <button 
-                                className={`p-2.5 rounded-xl border transition-all duration-300 relative ${
-                                    'bg-slate-100 border-slate-200 text-slate-700 hover:bg-slate-200'
-                                }`}
+                                className="p-2.5 rounded-xl border transition-all duration-300 relative bg-slate-100 border-slate-200 text-slate-700 hover:bg-slate-200"
                             >
                                 <Bell size={20} />
                                 <span className="absolute -top-1 -right-1 w-2 h-2 bg-cyan-400 rounded-full animate-pulse"></span>
                             </button>
 
-                            {/* Profile Dropdown - Hidden on mobile */}
-                            <div className="dropdown dropdown-end hidden lg:block">
-                                <label tabIndex={0} className="cursor-pointer block relative">
-                                    <div className={`w-10 h-10 rounded-xl border-2 p-0.5 transition-all duration-300 hover:scale-105 ${
-                                        'border-cyan-500'
-                                    }`}>
+                            {/* Profile Dropdown - Custom implementation */}
+                            <div className="relative hidden lg:block">
+                                <button 
+                                    onClick={toggleProfileDropdown}
+                                    className="cursor-pointer block relative focus:outline-none"
+                                >
+                                    <div className="w-10 h-10 rounded-xl border-2 p-0.5 transition-all duration-300 hover:scale-105 border-cyan-500">
                                         <img 
                                             src={logo} 
                                             alt="Profile" 
-                                            className={`w-full h-full rounded-lg object-cover ${
-                                                'bg-slate-100'
-                                            }`} 
+                                            className="w-full h-full rounded-lg object-cover bg-slate-100" 
                                         />
                                     </div>
-                                    <span className={`absolute -bottom-0.5 -right-0.5 w-3 h-3 bg-emerald-400 rounded-full border-2 ${
-                                        'border-white'
-                                    }`}></span>
-                                </label>
+                                    <span className="absolute -bottom-0.5 -right-0.5 w-3 h-3 bg-emerald-400 rounded-full border-2 border-white"></span>
+                                </button>
                                 
-                                <ul tabIndex={0} className={`menu dropdown-content mt-4 z-[1] p-3 shadow-2xl rounded-2xl w-56 border ${
-                                    'bg-white border-slate-200 text-slate-800'
-                                }`}>
-                                    <div className={`px-4 py-3 mb-2 border-b ${
-                                        'border-slate-200'
-                                    }`}>
-                                        <p className="text-xs font-bold text-cyan-400 uppercase tracking-wider">Student Portal</p>
+                                {/* Dropdown Menu */}
+                                {isProfileDropdownOpen && (
+                                    <div className="absolute right-0 mt-4 z-[1]">
+                                        <div className="bg-white border border-slate-200 shadow-2xl rounded-2xl w-56 text-slate-800 overflow-hidden">
+                                            <div className="px-4 py-3 mb-2 border-b border-slate-200">
+                                                <p className="text-xs font-bold text-cyan-400 uppercase tracking-wider">Student Portal</p>
+                                            </div>
+                                            <div className="p-1">
+                                                <Link 
+                                                    to="/profile" 
+                                                    onClick={closeProfileDropdown}
+                                                    className="block py-2.5 px-3 rounded-xl font-medium transition-all flex items-center gap-2 hover:bg-cyan-50 hover:text-cyan-600"
+                                                >
+                                                    <User size={18} /> My Profile
+                                                </Link>
+                                                <Link 
+                                                    to="/notifications" 
+                                                    onClick={closeProfileDropdown}
+                                                    className="block py-2.5 px-3 rounded-xl font-medium transition-all flex items-center gap-2 hover:bg-purple-50 hover:text-purple-600"
+                                                >
+                                                    <Bell size={18} /> Notifications
+                                                </Link>
+                                            </div>
+                                            <div className="divider my-1 before:bg-slate-200 after:bg-slate-200"></div>
+                                            <div className="p-1">
+                                                <button 
+                                                    onClick={handleLogout}
+                                                    className="w-full text-left py-2.5 px-3 rounded-xl font-bold transition-all flex items-center gap-2 text-rose-600 hover:bg-rose-50"
+                                                >
+                                                    <LogOut size={18} /> Logout
+                                                </button>
+                                            </div>
+                                        </div>
                                     </div>
-                                    <li>
-                                        <Link 
-                                            to="/profile" 
-                                            className={`py-2.5 rounded-xl font-medium transition-all flex items-center gap-2 ${
-                                                'hover:bg-cyan-50 hover:text-cyan-600'
-                                            }`}
-                                        >
-                                            <User size={18} /> My Profile
-                                        </Link>
-                                    </li>
-                                    <li>
-                                        <Link 
-                                            to="/notifications" 
-                                            className={`py-2.5 rounded-xl font-medium transition-all flex items-center gap-2 ${
-                                                'hover:bg-purple-50 hover:text-purple-600'
-                                            }`}
-                                        >
-                                            <Bell size={18} /> Notifications
-                                        </Link>
-                                    </li>
-                                    <div className={`divider my-1 ${
-                                        'before:bg-slate-200 after:bg-slate-200'
-                                    }`}></div>
-                                    <li>
-                                        <button className={`py-2.5 rounded-xl font-bold transition-all flex items-center gap-2 ${
-                                            'text-rose-600 hover:bg-rose-50'
-                                        }`}>
-                                            <LogOut size={18} /> Logout
-                                        </button>
-                                    </li>
-                                </ul>
+                                )}
                             </div>
 
                             {/* Mobile Menu Button */}
                             <button 
                                 onClick={toggleMobileMenu}
-                                className={`lg:hidden p-2.5 rounded-xl border transition-all duration-300 ${
-                                    'border-slate-200 text-slate-700 hover:bg-slate-200'
-                                }`}
+                                className="lg:hidden p-2.5 rounded-xl border transition-all duration-300 border-slate-200 text-slate-700 hover:bg-slate-200"
                             >
                                 {isMobileMenuOpen ? <X size={20} /> : <Menu size={20} />}
                             </button>
@@ -205,48 +204,40 @@ const NavBar = () => {
                     onClick={closeMobileMenu}
                     className={`absolute inset-0 transition-opacity duration-300 ${
                         isMobileMenuOpen ? 'opacity-100' : 'opacity-0'
-                    } ${'bg-black/40'}`}
+                    } bg-black/40`}
                 ></div>
 
                 {/* Drawer Content */}
                 <div className={`absolute top-0 right-0 h-full w-80 max-w-[85vw] transition-transform duration-300 ${
                     isMobileMenuOpen ? 'translate-x-0' : 'translate-x-full'
-                } ${'bg-white border-l border-slate-200'}`}>
+                } bg-white border-l border-slate-200`}>
                     
                     <div className="flex flex-col h-full">
                         {/* Header */}
-                        <div className={`p-6 border-b ${'border-slate-200'}`}>
+                        <div className="p-6 border-b border-slate-200">
                             <div className="flex items-center justify-between mb-6">
-                                <h2 className={`text-xl font-bold ${'text-slate-900'}`}>
+                                <h2 className="text-xl font-bold text-slate-900">
                                     Menu
                                 </h2>
                                 <button 
                                     onClick={closeMobileMenu}
-                                    className={`p-2 rounded-lg ${
-                                        'text-slate-600 hover:text-slate-900 hover:bg-slate-100'
-                                    }`}
+                                    className="p-2 rounded-lg text-slate-600 hover:text-slate-900 hover:bg-slate-100"
                                 >
                                     <X size={20} />
                                 </button>
                             </div>
 
                             {/* Profile Section in Mobile */}
-                            <div className={`flex items-center gap-3 p-3 rounded-xl ${
-                                'bg-slate-50'
-                            }`}>
-                                <div className={`w-12 h-12 rounded-xl border-2 p-0.5 ${
-                                    'border-cyan-500'
-                                }`}>
+                            <div className="flex items-center gap-3 p-3 rounded-xl bg-slate-50">
+                                <div className="w-12 h-12 rounded-xl border-2 p-0.5 border-cyan-500">
                                     <img 
                                         src={logo} 
                                         alt="Profile" 
-                                        className={`w-full h-full rounded-lg object-cover ${
-                                            'bg-slate-100'
-                                        }`} 
+                                        className="w-full h-full rounded-lg object-cover bg-slate-100" 
                                     />
                                 </div>
                                 <div>
-                                    <p className={`font-semibold ${'text-slate-900'}`}>
+                                    <p className="font-semibold text-slate-900">
                                         Student Name
                                     </p>
                                     <p className="text-xs text-cyan-400">Student Portal</p>
@@ -264,7 +255,7 @@ const NavBar = () => {
                                         onClick={closeMobileMenu}
                                         className={`flex items-center gap-3 px-4 py-3 rounded-xl font-semibold transition-all duration-300 ${
                                             location.pathname === item.path
-                                                ? `${item.activeColor} ${item.glowColor} ${'bg-slate-50'}`
+                                                ? `${item.activeColor} ${item.glowColor} bg-slate-50`
                                                 : `text-slate-600 hover:text-slate-900 hover:bg-slate-50 ${item.hoverGlow}`
                                         }`}
                                     >
@@ -277,15 +268,11 @@ const NavBar = () => {
                             </nav>
 
                             {/* Quick Actions */}
-                            <div className={`mt-6 pt-6 space-y-2 border-t ${
-                                'border-slate-200'
-                            }`}>
+                            <div className="mt-6 pt-6 space-y-2 border-t border-slate-200">
                                 <Link
                                     to="/profile"
                                     onClick={closeMobileMenu}
-                                    className={`flex items-center gap-3 px-4 py-3 rounded-xl font-medium transition-all ${
-                                        'text-slate-600 hover:text-cyan-600 hover:bg-cyan-50'
-                                    }`}
+                                    className="flex items-center gap-3 px-4 py-3 rounded-xl font-medium transition-all text-slate-600 hover:text-cyan-600 hover:bg-cyan-50"
                                 >
                                     <User size={18} />
                                     <span>My Profile</span>
@@ -294,9 +281,7 @@ const NavBar = () => {
                                 <Link
                                     to="/notifications"
                                     onClick={closeMobileMenu}
-                                    className={`flex items-center gap-3 px-4 py-3 rounded-xl font-medium transition-all ${
-                                        'text-slate-600 hover:text-purple-600 hover:bg-purple-50'
-                                    }`}
+                                    className="flex items-center gap-3 px-4 py-3 rounded-xl font-medium transition-all text-slate-600 hover:text-purple-600 hover:bg-purple-50"
                                 >
                                     <Bell size={18} />
                                     <span>Notifications</span>
@@ -305,11 +290,10 @@ const NavBar = () => {
                         </div>
 
                         {/* Footer with Logout */}
-                        <div className={`p-6 border-t ${'border-slate-200'}`}>
+                        <div className="p-6 border-t border-slate-200">
                             <button 
-                                className={`w-full flex items-center justify-center gap-3 px-4 py-3 rounded-xl font-bold transition-all ${
-                                    'text-rose-600 bg-rose-50 hover:bg-rose-100'
-                                }`}
+                                onClick={handleLogout}
+                                className="w-full flex items-center justify-center gap-3 px-4 py-3 rounded-xl font-bold transition-all text-rose-600 bg-rose-50 hover:bg-rose-100"
                             >
                                 <LogOut size={18} />
                                 <span>Logout</span>
@@ -318,6 +302,14 @@ const NavBar = () => {
                     </div>
                 </div>
             </div>
+
+            {/* Close dropdown when clicking outside */}
+            {isProfileDropdownOpen && (
+                <div 
+                    className="fixed inset-0 z-40" 
+                    onClick={closeProfileDropdown}
+                ></div>
+            )}
         </>
     );
 };
