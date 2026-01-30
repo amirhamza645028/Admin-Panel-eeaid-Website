@@ -375,4 +375,3 @@ const Register = () => {
           )}
         </div>
 
-        <div className="text
