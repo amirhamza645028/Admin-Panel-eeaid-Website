@@ -46,14 +46,14 @@ function CourseDashboard() {
       {/* Header Section */}
       <div className="max-w-7xl mx-auto">
         <div className="mb-8 text-center">
-          <h1 className="text-3xl  md:text-4xl font-bold bg-gradient-to-r from-white via-[#2F6FDB] to-[#F5A623] bg-clip-text text-transparent mb-2">
+          <h1 className="text-3xl  md:text-4xl font-bold bg-gradient-to-r from-white via-[#1a64e4] to-[#0374f6] bg-clip-text text-transparent mb-2">
             Your Course Dashboard, <span>{dashboardData.user.name}</span>
           </h1>
           <p className="text-gray-600">Track your progress and access learning resources</p>
         </div>
 
         {/* User Stats Card */}
-        <div className="bg-gradient-to-r from-[#2F6FDB] to-[#F5A623] rounded-2xl shadow-xl p-2 mb-4 text-white">
+        <div className="bg-gradient-to-r from-[#2F6FDB] to-[#136deb] rounded-2xl shadow-xl p-2 mb-4 text-white">
           <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
             <div>
               <div className="flex items-center gap-4 mb-2">
