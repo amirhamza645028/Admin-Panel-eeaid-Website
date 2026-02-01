@@ -1,7 +1,7 @@
 import { Link, useLocation } from "react-router-dom";
 import { useState } from "react";
 import { LogOut, User, Bell, Menu, X } from "lucide-react"; 
-import logo from '../../src/assets/favicon.ico';
+import logo from '../../src/assets/favicon.png';
 
 const NavBar = () => {
     const location = useLocation();

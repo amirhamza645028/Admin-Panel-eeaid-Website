@@ -5,6 +5,8 @@ import NavBar from '../../Layout/NavBar'
 import UserDashboard from '../../Pages/User/profile/UserDashboard'
 import MySuport from '../../Pages/User/suport/MySuport'
 import CourseDashboard from '../../Pages/User/course/myCourse/courseDashboard/CourseDashboard'
+import Register from '../../Pages/User/singIn/Register'
+import Login from '../../Pages/User/singIn/Login'
 
 function Home() {
   return (
@@ -14,6 +16,8 @@ function Home() {
           <UserDashboard></UserDashboard>
           <MySuport></MySuport>
           <CourseDashboard></CourseDashboard>
+          <Register></Register>
+          <Login></Login>
 
     </div>
   

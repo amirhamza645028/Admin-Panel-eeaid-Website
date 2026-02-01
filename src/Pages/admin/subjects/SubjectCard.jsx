@@ -2,8 +2,8 @@ import React from 'react';
 import { BookOpen, Clock } from 'lucide-react';
 
 const SubjectCard = ({ subject, onClick }) => {
-    return (
-        <div 
+  return (
+    <div 
       onClick={() => onClick(subject)}
       className="card bg-white hover:shadow-2xl transition-all duration-300 cursor-pointer border border-gray-100 hover:border-blue-300 transform hover:-translate-y-1"
     >
@@ -29,10 +29,15 @@ const SubjectCard = ({ subject, onClick }) => {
         <div className="flex items-center gap-2 mb-3">
           <div className="avatar">
             <div className="w-8 h-8 rounded-full">
-              <img src={subject.instructor.avatar} alt={subject.instructor.name} />
+              <img 
+                src={subject.instructor.avatar} 
+                alt={subject.instructor.name} 
+              />
             </div>
           </div>
-          <span className="text-sm text-gray-600">{subject.instructor.name}</span>
+          <span className="text-sm text-gray-600">
+            {subject.instructor.name}
+          </span>
         </div>
 
         {/* Feature Tags */}
@@ -71,7 +76,7 @@ const SubjectCard = ({ subject, onClick }) => {
         </div>
       </div>
     </div>
-    );
-  };
+  );
+};
 
   export default SubjectCard;

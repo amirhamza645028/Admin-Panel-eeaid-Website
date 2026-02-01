@@ -5,7 +5,7 @@ import {
   FiMail, FiSmartphone, FiShield 
 } from 'react-icons/fi';
 import { motion } from 'framer-motion';
-import Logo from '../Logo/Logo';
+import Logo from '../../../../src/assets/favicon.png';
 
 const Login = () => {
   const navigate = useNavigate();
@@ -124,7 +124,9 @@ const Login = () => {
       className="space-y-6"
     >
       <div className="text-center mb-8">
-        <Logo size="lg" />
+        {/* <Logo size="lg" /> */}
+        <img src={Logo} alt="" />
+        
         <h2 className="text-2xl font-bold text-gray-800 mt-6">Welcome Back</h2>
         <p className="text-gray-600 mt-2">Enter your phone number to continue</p>
       </div>
@@ -200,7 +202,8 @@ const Login = () => {
       className="space-y-6"
     >
       <div className="text-center mb-8">
-        <Logo size="lg" />
+        {/* <Logo size="lg" /> */}
+        <img src={Logo} alt="" />
         <h2 className="text-2xl font-bold text-gray-800 mt-6">Enter OTP</h2>
         <p className="text-gray-600 mt-2">
           We've sent a 6-digit code to {formData.phone}
@@ -283,7 +286,9 @@ const Login = () => {
       className="space-y-6"
     >
       <div className="text-center mb-8">
-        <Logo size="lg" />
+        {/* <Logo size="lg" /> */}
+         <img src={Logo} alt="" />
+        
         <h2 className="text-2xl font-bold text-gray-800 mt-6">Reset Password</h2>
         <p className="text-gray-600 mt-2">Enter your phone number and new password</p>
       </div>

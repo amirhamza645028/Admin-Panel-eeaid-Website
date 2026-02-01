@@ -4,7 +4,7 @@ import {
   LayoutDashboard, Users, BookOpen, Package, 
   UserCircle, LogOut, ChevronRight, Settings
 } from "lucide-react";
-import icon from '../../assets/favicon.ico';
+import icon from '../../assets/favicon.png';
 import useWindowSize from "../../hooks/useWindowSize";
 
 const AdminSidebar = ({ isCollapsed }) => {

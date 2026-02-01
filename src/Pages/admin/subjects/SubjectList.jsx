@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { useNavigate } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { Book, Search } from 'lucide-react';
 import SubjectDetails from './SubjectDetails';
 import SubjectCard from './SubjectCard';
@@ -46,12 +46,12 @@ const SubjectList = () => {
           </div>
 
           {/* Add Subject Button */}
-          <button
+          <Link to={'/subject-add'} 
             onClick={() => navigate('/admin/subject-add')}
             className="flex items-center gap-2 bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-500 hover:to-cyan-500 px-6 py-2.5 rounded-xl font-bold shadow-[0_0_15px_rgba(6,182,212,0.4)] transition-all text-white"
           >
             <Book size={20} /> Add Subject
-          </button>
+          </Link >
         </div>
       </div>
 

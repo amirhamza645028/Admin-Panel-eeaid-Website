@@ -111,7 +111,7 @@ const ProgramList = () => {
       {/* Programs Table */}
       <div className="bg-white/80 backdrop-blur-sm rounded-2xl shadow-xl overflow-hidden border border-slate-200/50">
         {/* Table Header */}
-        <div className="bg-gradient-to-r from-slate-800 to-slate-700 px-8 py-5">
+        <div className="bg-gradient-to-r from-cyan-500 to-cyan-600 text-white rounded-t-2xl font-semibold shadow-lg hover:shadow-xl hover:from-cyan-600 hover:to-cyan-700 transition-all duration-300 transform hover:-translate-y-0.5 px-8 py-5">
           <div className="grid grid-cols-12 gap-6 text-sm font-semibold text-white uppercase tracking-wider">
             <div className="col-span-5">Program Name</div>
             <div className="col-span-3">Validity</div>

@@ -173,7 +173,7 @@ const CouponList = () => {
       {/* Header */}
       <div className="flex items-center justify-between mb-8">
         <div>
-          <h1 className="text-4xl font-bold bg-gradient-to-r from-purple-600 to-pink-600 bg-clip-text text-transparent mb-2">
+          <h1 className="text-4xl font-bold bg-gradient-to-r from-blue-500 to-blue-600 hover:from-blue-600 hover:to-blue-700  bg-clip-text text-transparent mb-2">
             Coupons Management
           </h1>
           <p className="text-slate-600">Manage discount coupons and promotional codes</p>
@@ -181,7 +181,7 @@ const CouponList = () => {
         <Link
         to={'/coupons-add'}
           onClick={handleAddNew}
-          className="flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-purple-600 to-pink-600 text-white rounded-xl font-semibold shadow-lg hover:shadow-xl hover:from-purple-700 hover:to-pink-700 transition-all duration-300 transform hover:-translate-y-0.5"
+          className="flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-blue-500 to-blue-600 hover:from-blue-600 hover:to-blue-700 text-white rounded-xl font-semibold shadow-lg hover:shadow-xl  transition-all duration-300 transform hover:-translate-y-0.5"
         >
           <Plus size={20} />
           Add New Coupon
@@ -189,17 +189,17 @@ const CouponList = () => {
       </div>
 
       {/* Stats Cards */}
-      <div className="grid grid-cols-1 md:grid-cols-4 gap-6 mb-8">
+      <div className="grid grid-cols-1 md:grid-cols-4 gap-3 mb-4">
         {stats.map((stat, index) => (
           <div
             key={index}
-            className="bg-white rounded-2xl shadow-lg p-6 hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1"
+            className="bg-white rounded-2xl shadow-lg p-3 hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 flex gap-4"
           >
-            <div className={`w-12 h-12 bg-gradient-to-br ${stat.color} rounded-xl flex items-center justify-center mb-4 shadow-lg`}>
-              <stat.icon className="text-white" size={24} />
+            <div className={`w-8 h-8 bg-gradient-to-br ${stat.color} rounded-xl flex items-center justify-center mb-2 shadow-lg `}>
+              <stat.icon className="text-white" size={16} />
             </div>
             <p className="text-3xl font-bold text-slate-800 mb-1">{stat.value}</p>
-            <p className="text-sm text-slate-600 font-medium">{stat.label}</p>
+            <p className="text-sm text-[#F97316] font-medium mt-2">{stat.label}</p>
           </div>
         ))}
       </div>
@@ -214,7 +214,7 @@ const CouponList = () => {
               placeholder="Search coupons..."
               value={searchTerm}
               onChange={(e) => setSearchTerm(e.target.value)}
-              className="w-full pl-12 pr-4 py-3 rounded-xl border-2 border-slate-200 focus:border-purple-500 outline-none transition-colors"
+              className="w-full pl-12 pr-4 py-3 rounded-xl border-2 border-slate-200 focus:border-[#4A90E2] outline-none transition-colors"
             />
           </div>
           <div className="relative">
@@ -222,7 +222,7 @@ const CouponList = () => {
             <select
               value={statusFilter}
               onChange={(e) => setStatusFilter(e.target.value)}
-              className="pl-12 pr-8 py-3 rounded-xl border-2 border-slate-200 focus:border-purple-500 outline-none transition-colors bg-white cursor-pointer appearance-none min-w-[200px]"
+              className="pl-12 pr-8 py-3 rounded-xl border-2 border-slate-200 focus:border-[#F97316] outline-none transition-colors bg-white cursor-pointer appearance-none min-w-[200px]"
             >
               <option value="all">All Status</option>
               <option value="active">Active</option>
@@ -246,7 +246,7 @@ const CouponList = () => {
       </div>
 
       {/* Coupons Grid */}
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
         {filteredCoupons.map((coupon, index) => (
           <div
             key={coupon.id}
@@ -258,17 +258,17 @@ const CouponList = () => {
             {/* Card Header */}
             <div className={`p-6 bg-gradient-to-r ${
               coupon.isExpired 
-                ? 'from-red-500 to-red-600' 
+                ? 'from-[#F97316] to-[#d2691e]' 
                 : coupon.active 
-                ? 'from-purple-500 to-pink-500' 
-                : 'from-slate-500 to-slate-600'
+                ? 'from-[#2a7ad6] to-[#1376e8]' 
+                : 'from-[#6eabf1] to-[#0174f7]'
             } relative overflow-hidden`}>
               <div className="absolute top-0 right-0 w-32 h-32 bg-white/10 rounded-full -mr-16 -mt-16"></div>
               <div className="relative z-10">
                 <div className="flex items-center justify-between mb-4">
                   <Ticket className="text-white" size={32} />
                   {coupon.isExpired && (
-                    <span className="px-3 py-1 bg-red-700 text-white text-xs font-bold rounded-full">
+                    <span className="px-3 py-1 bg-[#4A90E2] text-white text-xs font-bold rounded-full">
                       EXPIRED
                     </span>
                   )}
@@ -289,12 +289,12 @@ const CouponList = () => {
             <div className="p-6">
               <div className="space-y-3 mb-6">
                 <div className="flex items-center justify-between text-sm">
-                  <span className="text-slate-600 font-medium flex items-center gap-2">
+                  <span className="text-[#4A90E2] font-medium flex items-center gap-2">
                     <Calendar size={16} />
                     Expires
                   </span>
                   <span className={`font-semibold ${
-                    isExpired(coupon.expiryDate) ? 'text-red-600' : 'text-slate-800'
+                    isExpired(coupon.expiryDate) ? 'text-[#f7bf07]' : 'text-slate-800'
                   }`}>
                     {new Date(coupon.expiryDate).toLocaleDateString('en-GB')}
                   </span>
@@ -326,8 +326,8 @@ const CouponList = () => {
                       coupon.isExpired
                         ? 'bg-slate-100 text-slate-400 cursor-not-allowed'
                         : coupon.active
-                        ? 'bg-emerald-100 text-emerald-700 hover:bg-emerald-200'
-                        : 'bg-slate-200 text-slate-700 hover:bg-slate-300'
+                        ? 'bg-emerald-100 text-[#F97316] hover:bg-[#4A90E2]'
+                        : 'bg-slate-200 text-[#F97316] hover:bg-slate-300'
                     }`}
                   >
                     {coupon.active ? <ToggleRight size={18} /> : <ToggleLeft size={18} />}
@@ -345,7 +345,7 @@ const CouponList = () => {
                 <div className="w-full bg-slate-200 rounded-full h-2 overflow-hidden">
                   <div
                     className={`h-full rounded-full transition-all duration-500 ${
-                      coupon.active ? 'bg-gradient-to-r from-purple-500 to-pink-500' : 'bg-slate-400'
+                      coupon.active ? 'bg-gradient-to-r from-[#e27a30] to-[#F97316]' : 'bg-[#0472f9]'
                     }`}
                     style={{ width: `${(coupon.used / coupon.maxUses) * 100}%` }}
                   ></div>
@@ -365,14 +365,14 @@ const CouponList = () => {
                 <Link
                 to={'/coupons-details'} 
                   onClick={() => handleEdit(coupon.id)}
-                  className="flex-1 flex items-center justify-center gap-2 px-4 py-2.5 bg-purple-100 text-purple-600 rounded-xl font-semibold hover:bg-purple-600 hover:text-white transition-all duration-300"
+                  className="flex-1 flex items-center justify-center gap-2 px-4 py-2.5 bg-purple-100 text-[#0472f9] rounded-xl font-semibold hover:bg-[#0472f9] hover:text-white transition-all duration-300"
                 >
                   <Edit size={18} />
                   Edit
                 </Link >
                 <button
                   onClick={() => handleDelete(coupon.id)}
-                  className="px-4 py-2.5 bg-red-100 text-red-600 rounded-xl font-semibold hover:bg-red-600 hover:text-white transition-all duration-300"
+                  className="px-4 py-2.5 bg-red-100 text-[#f57d0e] rounded-xl font-semibold hover:bg-[#0472f9] hover:text-white transition-all duration-300"
                 >
                   <Trash2 size={18} />
                 </button>
@@ -395,7 +395,7 @@ const CouponList = () => {
             <Link
             to={'/coupons-add'}
               onClick={handleAddNew}
-              className="inline-flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-purple-600 to-pink-600 text-white rounded-xl font-semibold"
+              className="inline-flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-purple-600 to-[#0472f9] text-white rounded-xl font-semibold"
             >
               <Plus size={20} />
               Add New Coupon

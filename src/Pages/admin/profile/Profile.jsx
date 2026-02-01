@@ -67,9 +67,9 @@ const Profile = () => {
       {/* Toast Notification */}
       {toast && (
         <div className="fixed top-4 right-4 z-50 animate-slideIn">
-          <div className={`px-6 py-4 rounded-xl shadow-2xl flex items-center gap-3 ${
+          <div className={`px-4 py-2 rounded-xl shadow-2xl flex items-center gap-3 ${
             toast.type === 'success' 
-              ? 'bg-gradient-to-r from-emerald-500 to-emerald-600' 
+              ? 'bg-gradient-to-r from-blue-500 to-blue-600' 
               : 'bg-gradient-to-r from-orange-500 to-orange-600'
           } text-white`}>
             <div className="w-2 h-2 rounded-full bg-white animate-ping"></div>
@@ -91,27 +91,27 @@ const Profile = () => {
         </div>
 
         {/* Stats Cards */}
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-6 mb-8">
+        <div className="grid grid-cols-1 md:grid-cols-4 gap-3 mb-4">
           {stats.map((stat, index) => (
             <div
               key={index}
-              className="bg-white rounded-2xl shadow-lg p-6 hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1"
+              className="bg-white rounded-2xl shadow-lg p-2 hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 flex gap-3 "
             >
-              <div className={`w-12 h-12 bg-gradient-to-br ${stat.color} rounded-xl flex items-center justify-center mb-4 shadow-lg`}>
-                <stat.icon className="text-white" size={24} />
+              <div className={`w-6 h-6 bg-gradient-to-br ${stat.color} rounded-xl flex items-center justify-center shadow-lg`}>
+                <stat.icon className="text-white mt-2" size={19} />
               </div>
-              <p className="text-3xl font-bold text-slate-800 mb-1">{stat.value}</p>
-              <p className="text-sm text-slate-600 font-medium">{stat.label}</p>
+              <p className="text-3xl font-bold text-[#f8a310] mb-1">{stat.value}</p>
+              <p className="text-sm text-slate-600 font-medium  mt-2">{stat.label}</p>
             </div>
           ))}
         </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-4">
           {/* Left Column - Profile Card */}
           <div className="lg:col-span-1">
-            <div className="bg-white rounded-2xl shadow-xl p-8 sticky top-8">
+            <div className="bg-white rounded-2xl shadow-xl p-4 sticky top-4">
               {/* Avatar */}
-              <div className="relative mb-6">
+              <div className="relative mb-3">
                 <div className="relative w-32 h-32 mx-auto">
                   <img
                     src={isEditing ? tempData.avatar : profileData.avatar}

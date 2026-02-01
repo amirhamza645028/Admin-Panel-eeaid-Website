@@ -28,6 +28,17 @@ import CourseBatchSingleCard from './Pages/User/course/allCourse/CourseBatchSing
 import MCQ from './Pages/User/course/myCourse/MCQ/MCQ';
 import MySuport from './Pages/User/suport/MySuport';
 import CourseDashboard from './Pages/User/course/myCourse/courseDashboard/CourseDashboard';
+import Login from './Pages/User/singIn/Login';
+import Register from './Pages/User/singIn/Register';
+import Permision from './Pages/admin/rolePermistion/Permision';
+import SubjectDetails from './Pages/admin/subjects/SubjectDetails';
+import Topic from './Pages/admin/topic/Topic';
+import Questions from './Pages/admin/questions/Questions';
+import Exams from './Pages/admin/exam/Exams';
+import AddExam from './Pages/admin/exam/AddExam';
+import Purchases from './Pages/admin/purchases/Purchases';
+import Invoice from './Pages/admin/invoice/Invoice';
+import Logout from './Pages/admin/logout/Logout';
 
 const router = createBrowserRouter([
   {
@@ -76,6 +87,10 @@ const router = createBrowserRouter([
           element:<StudentAdd></StudentAdd>
         },
         {
+          path:'/roles',
+          element:<Permision></Permision>
+        },
+        {
           path:'/profile',
           element:<Profile></Profile>
         },
@@ -104,6 +119,34 @@ const router = createBrowserRouter([
           element:<SubjectList></SubjectList>
         },
         {
+          path:'/subject-add',
+          element:<SubjectDetails></SubjectDetails> //ekhane subject add page ta add korte hobe [TODO:  ]
+        },
+        {
+          path:'/topics',
+          element:<Topic></Topic>
+        },
+        {
+          path:'/questions',
+          element:<Questions></Questions>
+        },
+        {
+          path:'/exams',
+          element:<Exams></Exams>
+        },
+        {
+          path:'/mcq-exams/new',
+          element:<AddExam></AddExam>
+        },
+        {
+          path:'/purchases',
+          element:<Purchases></Purchases>
+        },
+        {
+        path:'/invoices',
+        element:<Invoice></Invoice>  
+        },
+        {
           path:'/settings',
           element:<Settings></Settings>
         },
@@ -126,6 +169,18 @@ const router = createBrowserRouter([
         {
           path:'/user-CurseDashboard',
           element:<CourseDashboard></CourseDashboard>
+        },
+        {
+          path:'/user-login',
+          element:<Login></Login>
+        },
+        {
+          path:'/user-register',
+          element:<Register></Register>
+        },
+        {
+          path:'/Logout',
+          element:<Logout></Logout>
         }
        
       ]
