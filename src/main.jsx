@@ -39,6 +39,7 @@ import AddExam from './Pages/admin/exam/AddExam';
 import Purchases from './Pages/admin/purchases/Purchases';
 import Invoice from './Pages/admin/invoice/Invoice';
 import Logout from './Pages/admin/logout/Logout';
+import SubscriptionDiscountPage from './Pages/admin/Subscription/SubscriptionDiscountPage';
 
 const router = createBrowserRouter([
   {
@@ -181,6 +182,11 @@ const router = createBrowserRouter([
         {
           path:'/Logout',
           element:<Logout></Logout>
+        },
+        {
+          path:'/subscription',
+          element:<SubscriptionDiscountPage></SubscriptionDiscountPage>
+
         }
        
       ]

@@ -42,7 +42,8 @@ const AdminSidebar = ({ isCollapsed }) => {
         { title: "Programs", path: "/programs" },
         { title: "Purchases", path: "/purchases" },
         { title: "Coupons", path: "/coupons" },
-        { title: "Invoices", path: "/invoices" }
+        { title: "Invoices", path: "/invoices" },
+        { title: "Subscription",path: "/Subscription"}
       ]
     },
     { title: "Settings", icon: Settings, path: "/settings" },
